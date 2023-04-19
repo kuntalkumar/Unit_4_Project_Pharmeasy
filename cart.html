@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <style>
+        #upper {
+            display: flex;
+            width:60%;
+            border: 1px solid gray;
+            border-radius: 10px 10px 0 0;
+        }
+        #last{
+            text-align: right;
+            margin-left: 450px;
+            justify-content: center;
+            color: rgb(4, 165, 90);
+        }
+       #parent >div{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        width:60%;
+        border: 1px solid gray;
+        padding: auto;
+       }
+       img{
+            align-items: center;
+            width:50%;
+            padding:20px;
+            margin-right: 100px;
+        }
+        #parent div:nth-child(2)  p,h3{
+            width:150%;
+            margin-top: -10px;
+            margin-left: -50px;
+            justify-content: center;
+        }
+         #parent div:nth-child(2) h3:first-child{
+            padding-top:20px;
+        }
+        #parent div:nth-child(3){
+            display: block;
+            justify-content: end;
+            margin-left: 200px;
+            margin-right: -70px;
+            padding: 20px;
+        }
+        #qty{
+            border: 1px solid gray;
+            padding: 10px;
+            padding-right: 20px;
+            border-radius: 10px;
+            width:50px;
+            margin-top: 50px;
+        } 
+        #home{
+            color:black;
+        }
+        #upper h2{
+            margin-left: 10px;
+        }
+        #img{
+            width:20%;
+            margin-top:-30px;
+
+        }
+    </style>
+</head>
+<body>
+    <a href="https://pharmeasy.in/" id="home">Home</a>
+    <div id="upper">
+         <div><h2><span id="count">0</span> Items in your Cart</h2></div>
+         <div><h4 id="last"> Saved for later</h4></div>
+    </div>
+    <!-- </div> -->
+    <img id="img" src="https://assets.pharmeasy.in/web-assets/images/icDelete.svg" alt="">
+    <div id="upper"></div>
+    <div id="parent"></div>
+    <label for=""></label>
+    <select name="" id="qty">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+    </select>
+</body>
+</html>
+<script>
+var cart=JSON.parse(localStorage.getItem("cart"))||[];
+    if(cart.length>0){
+        displayCart();
+        updateCount(cart);
+    }
+    else{
+        document.getElementById("parent").textContent="No Items Present in Cart";
+    }
+   
+    function displayCart(){
+        cart.map(function(elem){
+            var div=document.createElement("div");
+        
+            var imgbox=document.createElement("div");
+
+            var image=document.createElement("img");
+            image.setAttribute("src",elem.image_url);
+            image.setAttribute("alt",elem.name);
+
+            var itembox=document.createElement("div")
+
+            var name=document.createElement("h3");
+            name.textContent=elem.name;
+
+            var owner=document.createElement("p");
+            owner.textContent=elem.owner;
+
+            var desc=document.createElement("p");
+            desc.textContent=elem.desc
+
+            var MRP=document.createElement("h3");
+            MRP.textContent=elem.MRP;
+
+            var Delivery=document.createElement("p");
+            Delivery.textContent=elem.Delivery;
+
+            var option=document.createElement("div")
+
+            var button=document.getElementById("img");
+
+            var qty=document.getElementById("qty");
+
+            itembox.append(name,owner,desc,MRP,Delivery);
+            imgbox.append(image);
+            option.append(button,qty)
+
+            div.append(imgbox,itembox,option);
+            document.getElementById("parent").append(div);
+    })
+ }
+//     function caltotal(){
+//     var total=cart.reduce(function(acc,currEl){
+//         return acc+currEl.finalprice;
+//     },0)
+//     var div=document.createElement("div");
+//     div.setAttribute("id","cart");
+
+//     var p=document.createElement("p1");
+//     p1.textContent="Cart Total";
+
+//     var p1=document.createElement("p1");
+//     p1.textContent= "Rs" + total;
+//     div.append(p,p1);
+//     document.querySelector("body").append(div);
+//     console.log(total);
+// }
+    function updateCount(data){
+        document.getElementById("count").textContent=data.length;
+    }
+</script>

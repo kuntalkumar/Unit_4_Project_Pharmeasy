@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+        #upper {
+            display: flex;
+            width:60%;
+            border: 1px solid gray;
+        }
+        #last{
+            text-align: right;
+            margin-left: 450px;
+            justify-content: center;
+        }
+       #parent {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        width:60%;
+        border: 1px solid gray;
+        padding: auto;
+       }
+       img{
+            align-items: center;
+            width:50%;
+            padding:20px;
+            margin-right: 100px;
+        }
+        #details > p,h3{
+            width:200%;
+            margin-top: -10px;
+            margin-left: -50px;
+            justify-content: center;
+        }
+        #parent > div>  h3:first-child{
+            padding-top:20px;
+        }
+        #option{
+            display: block;
+            justify-content: end;
+            margin-left: 200px;
+            padding: 20px;
+        }
+        button{
+           margin-bottom: 50px; 
+        }
+        #option > h4{
+            border: 1px solid gray;
+            padding: 10px;
+            padding-right: 20px;
+            border-radius: 10px;
+            width:30px;
+        }
+</style>
+<body>
+    <div id="upper">
+          <div><h2>3 Items present in Cart</h2></div>
+          <div><h4 id="last"> Saved for later</h4></div>
+    </div>
+    <div id="parent">
+          <div>
+            <img src="https://cdn01.pharmeasy.in/dam/products_otc/D23285/be-one-shilajit-ashwagandha-shatavari-100-ayurvedic-bottle-of-30-capsules-2-1672728411.jpg?dim=700x0&dpr=1&q=100" alt="">
+          </div>
+          <div id="details">
+            <h3>Be One Shilajit Ashwagandha Shatavari 100% Ayurvedic Bottle Of 30 Capsules</h3>
+            <p>By DOCTOR MOREPEN</p>
+            <P>50 Glucometer Test Strips(s) in Box</P>
+            <h3>MRP Rs 2499* <span>Rs1599</span></h3>
+            <p>Delivery by Today 5.00pm to 10.00pm</p>
+          </div>
+          <div id="option">
+                 <button>Delete</button>
+                 <h4>Qty</h4>
+          </div>
+    </div>
+</body>
+</html>
