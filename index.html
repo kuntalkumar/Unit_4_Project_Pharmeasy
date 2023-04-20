@@ -308,18 +308,18 @@
       expYear: "",
       cvv: "",
    };
-   const handleChange = (value, name) => {
+   var handleChange = (value, name) => {
       filledData[name] = value;
    };
-   const onStateChane = (value) => {
+   var onStateChane = (value) => {
       filledData.state = value;
    };
 
-   const handlePaymentMethod = (value) => {
+   var handlePaymentMethod = (value) => {
       filledData.paymentMode = value;
    };
 
-   const checkout = document.querySelector("#id-submit");
+   var checkout = document.querySelector("#id-submit");
    checkout.addEventListener("click", handleCheckout);
 
    function handleCheckout(event) {
@@ -353,9 +353,9 @@
          alert("Card Number is required..!");
       } else if (cardNumber.length != 16) {
          alert("Enter a valid number which is having 16 number..!");
-      } else if ( expMonth) {
+      } else if ( !expMonth) {
          alert("Expire Month is required..!");
-      } else if (expYear.length !=3) {
+      } else if (!expYear) {
          alert("Enter atleat 3 characters..!");
       } else if (!cvv) {
          alert("Cvv is required..!");

@@ -5,20 +5,73 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Payment sucuss</title>
+      <style>
+         
+         * {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-transform: capitalize;
+            transition: all 0.2s linear;
+            /* background-image: url(https://cdn.https://i.stack.imgur.com/jGlzr.png.com/wp-content/uploads/2018/12/snowfall-effect-css.png); */
+
+         }
+         .cont {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            min-height: 100vh;
+            /* background: linear-gradient(90deg, #d1d9d5 60%, #535554 40.1%); */
+         }
+         h2{
+            color: rgb(9, 9, 9);
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+
+         }
+         .btn{
+            color:rgb(237, 242, 230);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+
+         }
+      </style>
    </head>
    <body>
-       <center>
-   
-         <h2>Payment Successful..!</h2>
-         <img src="https://fcs3pub.s3.amazonaws.com/photo-book/images/payment/success.gif" alt="" />
-         <button onclick="handleClick()">Back to home</button>
+      
 
-      </center>
+
+      <div class="cont">
+
+         <h2 >Payment Successful..!</h2>
+
+       
+   
+        
+         <img src="https://fcs3pub.s3.amazonaws.com/photo-book/images/payment/success.gif" alt="" />
+         <div class="btn">
+
+            <button onclick="handleClick()">Back to home</button>
+         </div>
+      </div>
+     
+
+
+      
+
+      
       
    </body>
 </html>
 <script>
-   const handleClick = () => {
+   var handleClick = () => {
       window.location.href = "index.html";
     };
 </script>
