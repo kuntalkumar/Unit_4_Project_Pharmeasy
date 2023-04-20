@@ -22,7 +22,7 @@
 // console.log(arr);
 
 
- document.getElementById("deliver").addEventListener("click",fun);
+document.getElementById("deliver").addEventListener("click",fun);
 
 //  var addresses=
 //  console.log(addresses)
