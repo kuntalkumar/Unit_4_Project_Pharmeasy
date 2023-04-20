@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product-page</title>
+    <style>
+    #parent{
+    background-color: #10847e;
+    }
+    nav{
+    display: flex;
+    width: 70%;
+    margin: auto;
+    cursor: pointer;
+    color: white;
+    font-size: 25px;
+    }
+    a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    }
+    a:hover{
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    }
+    #left{
+    display: flex;
+    width: 30%;
+    }
+    #left a img{
+    margin-top: 14px;
+    width: 150px;
+    }
+    #left div{
+    height: 80%;
+    /* background-color: red; */
+    }
+    #left div div {
+    display: flex;
+    margin: 0 0 0 60px;
+    }
+    #left div div img {
+    width: 20px;
+    height: 30px;
+    margin: auto;
+    text-align: center;
+    }
+    i{
+    margin : 0 0 0 5px;
+    font-size: 20px;
+    }
+    h3{
+    margin: -5px 0 0 30px ;
+    color: white;
+    }
+    #right{
+    width: 70%;
+    display: flex;
+    justify-content: right;
+    }
+    #right div {
+    display: flex;
+    margin: 0 20px 0 20px;
+    }
+    .login{
+    display: flex;
+    }
+    #right div img{
+    margin: auto;
+    width: 50px;
+    height: 30px;
+    }
+    #right i {
+    margin: auto;
+    margin-right: 10px;
+    }
+    #right p {
+    margin: auto;
+    text-align: center;
+    color: white;
+    }
+    #second{
+    display: flex;
+    width: 40%;
+    cursor: pointer;
+    justify-content: center;
+    margin: auto;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    }
+    #second p {
+    margin: 10px 40px 10px 40px  ;
+    }
+  
+
+
+        #parents{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: auto;
+    width: 70%;
+    margin-top: 100px;
+}
+#parents div{
+    width: 70%;
+    gap: 10px;
+    text-align: center;
+    margin: 20px 0 60px 0 ;
+}
+h4{
+    width: 60%;
+    margin: auto;
+}
+#parents div img{
+    width: 70%;
+}
+p{
+    display: block;
+    margin: 10px;
+    text-align: center;
+    font-size: 25px;
+}
+button{
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    cursor: pointer;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+    margin-top: -50px;
+}
+button:hover{
+    background-color: rgb(227, 227, 227);
+    font-size: 20px;
+    cursor: pointer;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+    margin-top: -50px;
+}
+ .fa-bag-shopping{
+    font-size: 100px;
+}
+#filter{
+    font-size: 25px;
+    margin: 20px 0 0 40px;
+}
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <nav>
+            <div id="left">
+                <a href="http://127.0.0.1:5500/unit-4/spring-5/day-6/index1.html">
+                    <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png" alt="pharmeasy logo">
+                </a>
+                <hr>
+                <div>
+                    <div>
+                        <img src="https://assets.pharmeasy.in/apothecary/images/ic_express%20delivery.svg?dim=16x0" alt="Energy logo">
+                        <p>Express delivery to</p>
+                    </div>
+                </div>
+            </div>
+            <div id="right">
+                <div>
+                    <i class="fa-regular fa-circle-down"></i>
+                    <p>Download App</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <p>Offers</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p>Cart</p>
+                </div>
+            </div>
+        </nav>
+        <hr>
+        <div id="second" >
+            <a href="https://pharmeasy.in/online-medicine-order?src=header"><p>Medicine</p></a>
+            <a href="https://pharmeasy.in/diagnostics"><p>Healthcare</p></a>
+            <a href="https://pharmeasy.in/health-care?src=header"><p>Lab Tests</p></a>
+            <a href="https://pharmeasy.in/surgicare?src=header"><p>Surgeries</p></a>
+            <a href="https://pharmeasy.in/offers?src=header"><p>Offers</p></a>
+            <a href="https://pharmeasy.in/plus?src=header"><p>PLUS</p></a>
+            <a href="https://pharmeasy.in/blog/"><p>Health Bolgs</p></a>
+            <a href="https://pharmeasy.in/health-care/9066?src=homecard"><p>Value Store</p></a>
+        </div>
+        <hr>
+    </div>
+
+    <!-- <select id="filter" onchange="change()">
+        <option value="all">Select Priority</option>
+        <option value="Low_to_high">Low to High</option>
+        <option value="High_to_low">High to Low</option>
+    </select> -->
+
+
+    <div id="parents">
+        <!-- ----------- -->
+        <!-- <div>
+            <img src="image_url:"https://content.shop4reebok.com/static/Product-EX4296/reebok_EX4296_1.jpg.plp"," alt="">
+            <h4>name: "MEN'S REEBOK RUNNING ROADMAP SHOES",</h4>
+            <div>
+               <p>price: "1170",</p>
+               <p>strikedoffprice: "2599",</p>
+            </div>
+        </div> -->
+    </div>
+</body>
+</html>
+<script>
+    
+var mensData = [
+    {
+      image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/S04683/evion-400mg-strip-of-20-capsule-2-1678787718.jpg?dim=700x0&dpr=1&q=100",
+        name: "Evion 400mg Strip Of 20 Capsule",
+        price: "₹78.19",
+        strikedoffprice: "₹78.98",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/071710/evion-400mg-strip-of-10-capsules-2-1671741393.jpg?dim=700x0&dpr=1&q=100",
+        name: "Evion 400mg Strip Of 10 Capsules ",
+        price: "₹35.54",
+        strikedoffprice: "₹35.9",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/071715/evion-600mg-strip-of-10-capsules-1-1671741257.jpg",
+        name: " Evion 600mg Strip Of 10 Capsules",
+        price: "₹51.18",
+        strikedoffprice: "₹51.7",
+      },
+      {
+        image_url:
+        "https://cdn01.pharmeasy.in/dam/products_otc/I13917/calcimax-p-strip-of-15-tablets-2-1669710266.jpg?dim=700x0&dpr=1&q=100",
+        name: "Calcimax P Strip Of 15 Tablets",
+        price: "₹174.24",
+        strikedoffprice: "₹274.24",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg",
+        name: "Jointace C2 Strip Of 10 Tablets",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg?dim=700x0&dpr=1&q=100 ",
+        name: " Jointace C2 Strip Of 10 Tablets ",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/I12335/calcimax-d-1000mg-strip-of-30-tablets-2-1669710215.jpg?dim=700x0&dpr=1&q=100",
+        name: " Extrammune Strip Of 30 Tablets ",
+        price: "₹106.2",
+        strikedoffprice: "₹118",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg?dim=700x0&dpr=1&q=100 ",
+        name: "MEN'S REEBOK TRAINING  POLO T-SHIRTS TEE  ",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+    {
+      image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/S04683/evion-400mg-strip-of-20-capsule-2-1678787718.jpg?dim=700x0&dpr=1&q=100",
+        name: "Evion 400mg Strip Of 20 Capsule",
+        price: "₹78.19",
+        strikedoffprice: "₹78.98",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/071710/evion-400mg-strip-of-10-capsules-2-1671741393.jpg?dim=700x0&dpr=1&q=100",
+        name: "Evion 400mg Strip Of 10 Capsules ",
+        price: "₹35.54",
+        strikedoffprice: "₹35.9",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/071715/evion-600mg-strip-of-10-capsules-1-1671741257.jpg",
+        name: " Evion 600mg Strip Of 10 Capsules",
+        price: "₹51.18",
+        strikedoffprice: "₹51.7",
+      },
+      {
+        image_url:
+        "https://cdn01.pharmeasy.in/dam/products_otc/I13917/calcimax-p-strip-of-15-tablets-2-1669710266.jpg?dim=700x0&dpr=1&q=100",
+        name: "Calcimax P Strip Of 15 Tablets",
+        price: "₹174.24",
+        strikedoffprice: "₹274.24",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg",
+        name: "Jointace C2 Strip Of 10 Tablets",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg?dim=700x0&dpr=1&q=100 ",
+        name: " Jointace C2 Strip Of 10 Tablets ",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/I12335/calcimax-d-1000mg-strip-of-30-tablets-2-1669710215.jpg?dim=700x0&dpr=1&q=100",
+        name: " Extrammune Strip Of 30 Tablets ",
+        price: "₹106.2",
+        strikedoffprice: "₹118",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg?dim=700x0&dpr=1&q=100 ",
+        name: "MEN'S REEBOK TRAINING  POLO T-SHIRTS TEE  ",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+    {
+      image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/S04683/evion-400mg-strip-of-20-capsule-2-1678787718.jpg?dim=700x0&dpr=1&q=100",
+        name: "Evion 400mg Strip Of 20 Capsule",
+        price: "₹78.19",
+        strikedoffprice: "₹78.98",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/071710/evion-400mg-strip-of-10-capsules-2-1671741393.jpg?dim=700x0&dpr=1&q=100",
+        name: "Evion 400mg Strip Of 10 Capsules ",
+        price: "₹35.54",
+        strikedoffprice: "₹35.9",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/071715/evion-600mg-strip-of-10-capsules-1-1671741257.jpg",
+        name: " Evion 600mg Strip Of 10 Capsules",
+        price: "₹51.18",
+        strikedoffprice: "₹51.7",
+      },
+      {
+        image_url:
+        "https://cdn01.pharmeasy.in/dam/products_otc/I13917/calcimax-p-strip-of-15-tablets-2-1669710266.jpg?dim=700x0&dpr=1&q=100",
+        name: "Calcimax P Strip Of 15 Tablets",
+        price: "₹174.24",
+        strikedoffprice: "₹274.24",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg",
+        name: "Jointace C2 Strip Of 10 Tablets",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg?dim=700x0&dpr=1&q=100 ",
+        name: " Jointace C2 Strip Of 10 Tablets ",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/I12335/calcimax-d-1000mg-strip-of-30-tablets-2-1669710215.jpg?dim=700x0&dpr=1&q=100",
+        name: " Extrammune Strip Of 30 Tablets ",
+        price: "₹106.2",
+        strikedoffprice: "₹118",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg?dim=700x0&dpr=1&q=100 ",
+        name: "MEN'S REEBOK TRAINING  POLO T-SHIRTS TEE  ",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+    {
+      image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/S04683/evion-400mg-strip-of-20-capsule-2-1678787718.jpg?dim=700x0&dpr=1&q=100",
+        name: "Evion 400mg Strip Of 20 Capsule",
+        price: "₹78.19",
+        strikedoffprice: "₹78.98",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/071710/evion-400mg-strip-of-10-capsules-2-1671741393.jpg?dim=700x0&dpr=1&q=100",
+        name: "Evion 400mg Strip Of 10 Capsules ",
+        price: "₹35.54",
+        strikedoffprice: "₹35.9",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/071715/evion-600mg-strip-of-10-capsules-1-1671741257.jpg",
+        name: " Evion 600mg Strip Of 10 Capsules",
+        price: "₹51.18",
+        strikedoffprice: "₹51.7",
+      },
+      {
+        image_url:
+        "https://cdn01.pharmeasy.in/dam/products_otc/I13917/calcimax-p-strip-of-15-tablets-2-1669710266.jpg?dim=700x0&dpr=1&q=100",
+        name: "Calcimax P Strip Of 15 Tablets",
+        price: "₹174.24",
+        strikedoffprice: "₹274.24",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg",
+        name: "Jointace C2 Strip Of 10 Tablets",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg?dim=700x0&dpr=1&q=100 ",
+        name: " Jointace C2 Strip Of 10 Tablets ",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/I12335/calcimax-d-1000mg-strip-of-30-tablets-2-1669710215.jpg?dim=700x0&dpr=1&q=100",
+        name: " Extrammune Strip Of 30 Tablets ",
+        price: "₹106.2",
+        strikedoffprice: "₹118",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg?dim=700x0&dpr=1&q=100 ",
+        name: "MEN'S REEBOK TRAINING  POLO T-SHIRTS TEE  ",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+    {
+      image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/S04683/evion-400mg-strip-of-20-capsule-2-1678787718.jpg?dim=700x0&dpr=1&q=100",
+        name: "Evion 400mg Strip Of 20 Capsule",
+        price: "₹78.19",
+        strikedoffprice: "₹78.98",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/071710/evion-400mg-strip-of-10-capsules-2-1671741393.jpg?dim=700x0&dpr=1&q=100",
+        name: "Evion 400mg Strip Of 10 Capsules ",
+        price: "₹35.54",
+        strikedoffprice: "₹35.9",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/071715/evion-600mg-strip-of-10-capsules-1-1671741257.jpg",
+        name: " Evion 600mg Strip Of 10 Capsules",
+        price: "₹51.18",
+        strikedoffprice: "₹51.7",
+      },
+      {
+        image_url:
+        "https://cdn01.pharmeasy.in/dam/products_otc/I13917/calcimax-p-strip-of-15-tablets-2-1669710266.jpg?dim=700x0&dpr=1&q=100",
+        name: "Calcimax P Strip Of 15 Tablets",
+        price: "₹174.24",
+        strikedoffprice: "₹274.24",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg",
+        name: "Jointace C2 Strip Of 10 Tablets",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg?dim=700x0&dpr=1&q=100 ",
+        name: " Jointace C2 Strip Of 10 Tablets ",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/I12335/calcimax-d-1000mg-strip-of-30-tablets-2-1669710215.jpg?dim=700x0&dpr=1&q=100",
+        name: " Extrammune Strip Of 30 Tablets ",
+        price: "₹106.2",
+        strikedoffprice: "₹118",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg?dim=700x0&dpr=1&q=100 ",
+        name: "MEN'S REEBOK TRAINING  POLO T-SHIRTS TEE  ",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+    {
+      image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/S04683/evion-400mg-strip-of-20-capsule-2-1678787718.jpg?dim=700x0&dpr=1&q=100",
+        name: "Evion 400mg Strip Of 20 Capsule",
+        price: "₹78.19",
+        strikedoffprice: "₹78.98",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/071710/evion-400mg-strip-of-10-capsules-2-1671741393.jpg?dim=700x0&dpr=1&q=100",
+        name: "Evion 400mg Strip Of 10 Capsules ",
+        price: "₹35.54",
+        strikedoffprice: "₹35.9",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/071715/evion-600mg-strip-of-10-capsules-1-1671741257.jpg",
+        name: " Evion 600mg Strip Of 10 Capsules",
+        price: "₹51.18",
+        strikedoffprice: "₹51.7",
+      },
+      {
+        image_url:
+        "https://cdn01.pharmeasy.in/dam/products_otc/I13917/calcimax-p-strip-of-15-tablets-2-1669710266.jpg?dim=700x0&dpr=1&q=100",
+        name: "Calcimax P Strip Of 15 Tablets",
+        price: "₹174.24",
+        strikedoffprice: "₹274.24",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg",
+        name: "Jointace C2 Strip Of 10 Tablets",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg?dim=700x0&dpr=1&q=100 ",
+        name: " Jointace C2 Strip Of 10 Tablets ",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/I12335/calcimax-d-1000mg-strip-of-30-tablets-2-1669710215.jpg?dim=700x0&dpr=1&q=100",
+        name: " Extrammune Strip Of 30 Tablets ",
+        price: "₹106.2",
+        strikedoffprice: "₹118",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg?dim=700x0&dpr=1&q=100 ",
+        name: "MEN'S REEBOK TRAINING  POLO T-SHIRTS TEE  ",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+    {
+      image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/S04683/evion-400mg-strip-of-20-capsule-2-1678787718.jpg?dim=700x0&dpr=1&q=100",
+        name: "Evion 400mg Strip Of 20 Capsule",
+        price: "₹78.19",
+        strikedoffprice: "₹78.98",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/071710/evion-400mg-strip-of-10-capsules-2-1671741393.jpg?dim=700x0&dpr=1&q=100",
+        name: "Evion 400mg Strip Of 10 Capsules ",
+        price: "₹35.54",
+        strikedoffprice: "₹35.9",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/071715/evion-600mg-strip-of-10-capsules-1-1671741257.jpg",
+        name: " Evion 600mg Strip Of 10 Capsules",
+        price: "₹51.18",
+        strikedoffprice: "₹51.7",
+      },
+      {
+        image_url:
+        "https://cdn01.pharmeasy.in/dam/products_otc/I13917/calcimax-p-strip-of-15-tablets-2-1669710266.jpg?dim=700x0&dpr=1&q=100",
+        name: "Calcimax P Strip Of 15 Tablets",
+        price: "₹174.24",
+        strikedoffprice: "₹274.24",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg",
+        name: "Jointace C2 Strip Of 10 Tablets",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg?dim=700x0&dpr=1&q=100 ",
+        name: " Jointace C2 Strip Of 10 Tablets ",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/I12335/calcimax-d-1000mg-strip-of-30-tablets-2-1669710215.jpg?dim=700x0&dpr=1&q=100",
+        name: " Extrammune Strip Of 30 Tablets ",
+        price: "₹106.2",
+        strikedoffprice: "₹118",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg?dim=700x0&dpr=1&q=100 ",
+        name: "MEN'S REEBOK TRAINING  POLO T-SHIRTS TEE  ",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+    {
+      image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/S04683/evion-400mg-strip-of-20-capsule-2-1678787718.jpg?dim=700x0&dpr=1&q=100",
+        name: "Evion 400mg Strip Of 20 Capsule",
+        price: "₹78.19",
+        strikedoffprice: "₹78.98",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/071710/evion-400mg-strip-of-10-capsules-2-1671741393.jpg?dim=700x0&dpr=1&q=100",
+        name: "Evion 400mg Strip Of 10 Capsules ",
+        price: "₹35.54",
+        strikedoffprice: "₹35.9",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/071715/evion-600mg-strip-of-10-capsules-1-1671741257.jpg",
+        name: " Evion 600mg Strip Of 10 Capsules",
+        price: "₹51.18",
+        strikedoffprice: "₹51.7",
+      },
+      {
+        image_url:
+        "https://cdn01.pharmeasy.in/dam/products_otc/I13917/calcimax-p-strip-of-15-tablets-2-1669710266.jpg?dim=700x0&dpr=1&q=100",
+        name: "Calcimax P Strip Of 15 Tablets",
+        price: "₹174.24",
+        strikedoffprice: "₹274.24",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg",
+        name: "Jointace C2 Strip Of 10 Tablets",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg?dim=700x0&dpr=1&q=100 ",
+        name: " Jointace C2 Strip Of 10 Tablets ",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/I12335/calcimax-d-1000mg-strip-of-30-tablets-2-1669710215.jpg?dim=700x0&dpr=1&q=100",
+        name: " Extrammune Strip Of 30 Tablets ",
+        price: "₹106.2",
+        strikedoffprice: "₹118",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg?dim=700x0&dpr=1&q=100 ",
+        name: "MEN'S REEBOK TRAINING  POLO T-SHIRTS TEE  ",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+    {
+      image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/S04683/evion-400mg-strip-of-20-capsule-2-1678787718.jpg?dim=700x0&dpr=1&q=100",
+        name: "Evion 400mg Strip Of 20 Capsule",
+        price: "₹78.19",
+        strikedoffprice: "₹78.98",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/071710/evion-400mg-strip-of-10-capsules-2-1671741393.jpg?dim=700x0&dpr=1&q=100",
+        name: "Evion 400mg Strip Of 10 Capsules ",
+        price: "₹35.54",
+        strikedoffprice: "₹35.9",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/071715/evion-600mg-strip-of-10-capsules-1-1671741257.jpg",
+        name: " Evion 600mg Strip Of 10 Capsules",
+        price: "₹51.18",
+        strikedoffprice: "₹51.7",
+      },
+      {
+        image_url:
+        "https://cdn01.pharmeasy.in/dam/products_otc/I13917/calcimax-p-strip-of-15-tablets-2-1669710266.jpg?dim=700x0&dpr=1&q=100",
+        name: "Calcimax P Strip Of 15 Tablets",
+        price: "₹174.24",
+        strikedoffprice: "₹274.24",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg",
+        name: "Jointace C2 Strip Of 10 Tablets",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg?dim=700x0&dpr=1&q=100 ",
+        name: " Jointace C2 Strip Of 10 Tablets ",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/I12335/calcimax-d-1000mg-strip-of-30-tablets-2-1669710215.jpg?dim=700x0&dpr=1&q=100",
+        name: " Extrammune Strip Of 30 Tablets ",
+        price: "₹106.2",
+        strikedoffprice: "₹118",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg?dim=700x0&dpr=1&q=100 ",
+        name: "MEN'S REEBOK TRAINING  POLO T-SHIRTS TEE  ",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+    {
+      image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/S04683/evion-400mg-strip-of-20-capsule-2-1678787718.jpg?dim=700x0&dpr=1&q=100",
+        name: "Evion 400mg Strip Of 20 Capsule",
+        price: "₹78.19",
+        strikedoffprice: "₹78.98",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/071710/evion-400mg-strip-of-10-capsules-2-1671741393.jpg?dim=700x0&dpr=1&q=100",
+        name: "Evion 400mg Strip Of 10 Capsules ",
+        price: "₹35.54",
+        strikedoffprice: "₹35.9",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/071715/evion-600mg-strip-of-10-capsules-1-1671741257.jpg",
+        name: " Evion 600mg Strip Of 10 Capsules",
+        price: "₹51.18",
+        strikedoffprice: "₹51.7",
+      },
+      {
+        image_url:
+        "https://cdn01.pharmeasy.in/dam/products_otc/I13917/calcimax-p-strip-of-15-tablets-2-1669710266.jpg?dim=700x0&dpr=1&q=100",
+        name: "Calcimax P Strip Of 15 Tablets",
+        price: "₹174.24",
+        strikedoffprice: "₹274.24",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg",
+        name: "Jointace C2 Strip Of 10 Tablets",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg?dim=700x0&dpr=1&q=100 ",
+        name: " Jointace C2 Strip Of 10 Tablets ",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products_otc/I12335/calcimax-d-1000mg-strip-of-30-tablets-2-1669710215.jpg?dim=700x0&dpr=1&q=100",
+        name: " Extrammune Strip Of 30 Tablets ",
+        price: "₹106.2",
+        strikedoffprice: "₹118",
+      },
+      {
+        image_url:
+          "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg?dim=700x0&dpr=1&q=100 ",
+        name: "MEN'S REEBOK TRAINING  POLO T-SHIRTS TEE  ",
+        price: "₹283.8",
+        strikedoffprice: "₹330",
+      },
+    ];
+  
+  display(mensData) ;
+
+
+//   function change(mensData){
+//       var role = document.getElementById("filter").value ;
+//       console.log(role) ;
+//       var filterJobs = mensData.filter(function(ele){
+//         if ( role === 'all'){
+//         return true ;
+//       }
+//       else if ( role === Low_to_high ){
+//         return ele.name.sort();
+//       }
+//       })
+//       displaydata(filterJobs) ;
+//     }
+
+
+
+    function display(items){
+      items.map(function(ele,i){
+        var div = document.createElement("div") ;
+  
+        var image = document.createElement("img") ;
+        image.setAttribute("src",ele.image_url) ;
+        
+        var name = document.createElement("h4") ;
+        name.textContent = ele.name ;
+        name.style.textAlign = "left" ;
+  
+        var price_box = document.createElement("div") ; 
+  
+        var price = document.createElement("p") ;
+        price.textContent = ele.price ;
+  
+        var strikedoffprice = document.createElement("p") ;
+        strikedoffprice.textContent = ele.strikedoffprice ;
+        strikedoffprice.style.textDecoration = "line-through" ;
+
+        var button = document.createElement("button") ;
+        button.textContent = "Add to Cart" ;
+        button.addEventListener("click",function(){
+            AddToCart(ele) ;
+        }) ;
+  
+        price_box.append(price,strikedoffprice) ;
+        div.append(image,name,price_box,button) ;
+        document.getElementById("parents").append(div) ;
+      })
+    }
+       
+
+      var arr = [] ;
+      var count = 0 ;
+      function AddToCart(ele){
+        arr.map(function(e,i){
+            if ( e.image_url === ele.image_url && e.name === ele.name ){
+                count++ ;
+                alert("This Item already in Cart") ;
+            }
+        })
+        console.log(count) ;
+        if( count == 0 ){
+          arr.push(ele) ;
+          localStorage.setItem("cartItems",JSON.stringify(arr)) ;
+          alert("Your Item in Cart") ;
+        }
+      }
+</script>
