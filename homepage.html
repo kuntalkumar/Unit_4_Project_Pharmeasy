@@ -33,6 +33,7 @@
           <div>Delete</div>
           <div>Qty</div> -->
     </div>
+    <div id="right"></div>
 </body>
 </html>
 <script>
@@ -43,10 +44,23 @@
       name: "Be One Shilajit Ashwagandha Shatavari 100% Ayurvedic Bottle Of 30 Capsules",
       owner:"By DOCTOR MOREPEN",
       desc:"50 Glucometer Test Strips(s) in Box",
-      MRP:"MRP Rs 2499* Rs1599",
+      MRP:"2499",
+      Price:"1599",
       Delivery:"Delivery by Today 5.00pm to 10.00pm"
-    },
+    }
     ];
+    // var right=[
+    //   {
+    //     Name:"Bill Summary",
+    //     TotalMRP:"Total MRP",
+    //     DiscoutonMRP:"Discount on MRP",
+    //     CartVal:"Cart Value",
+    //     Deliverycharge:"login link",
+    //     image_url:"https://assets.pharmeasy.in/web-assets/images/gift.svg",
+    //     check:"Login to check if you have Free Delivery",
+    //     Amount:"Amount to be paid"
+    //   }
+    // ]
   display(Data);
      function display(Data){
    Data.map(function(elem){
@@ -70,12 +84,15 @@
         desc.textContent=elem.desc
 
         var MRP=document.createElement("h3");
-        MRP.textContent=elem.MRP;
+        MRP.textContent="MRP Rs"+elem.MRP;
+
+        var Price=document.createElement("h3");
+        Price.textContent="Rs"+elem.Price;
 
         var Delivery=document.createElement("p");
         Delivery.textContent=elem.Delivery;
 
-        itembox.append(name,owner,desc,MRP,Delivery);
+        itembox.append(name,owner,desc,MRP,Price,Delivery);
         imgbox.append(image);
 
         var button=document.createElement("button");
@@ -88,10 +105,17 @@
         document.getElementById("parent").append(div);
     })
  }
+ 
     var array = JSON.parse(localStorage.getItem("cart"))||[];
            function cart(elem){
             console.log(elem);
-             array.push(elem);
+            array.push(elem);
             localStorage.setItem("cart",JSON.stringify(array));
            }
+    // var array1 = JSON.parse(localStorage.getItem("Buy"))||[];
+    //        function buy(elem){
+    //         console.log(elem);
+    //         array1.push(elem);
+    //         localStorage.setItem("buy",JSON.stringify(array1));
+    //        }
 </script>

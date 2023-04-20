@@ -55,13 +55,22 @@
             border-radius: 10px;
             width:30px;
         }
+        #fullpage{
+            display: flex;
+            gap:20px;
+        }
+        #right{
+            width:80%
+        }
 </style>
 <body>
+    <div id="fullpage">
+    <div id="parent">
     <div id="upper">
           <div><h2>3 Items present in Cart</h2></div>
           <div><h4 id="last"> Saved for later</h4></div>
     </div>
-    <div id="parent">
+    <div id="left">
           <div>
             <img src="https://cdn01.pharmeasy.in/dam/products_otc/D23285/be-one-shilajit-ashwagandha-shatavari-100-ayurvedic-bottle-of-30-capsules-2-1672728411.jpg?dim=700x0&dpr=1&q=100" alt="">
           </div>
@@ -76,6 +85,28 @@
                  <button>Delete</button>
                  <h4>Qty</h4>
           </div>
+    </div>
+    <div id="right">
+        <div id="upperright">
+          <h3>Cart Total</h3>
+        </div>
+        <div>
+          <h3>Apply Coupon</h3>
+          <button>Add Delivery Address</button>
+        </div>
+        <div>
+        <h3>Bill Summary</h3>
+        <p>Total MRP</p>
+        <p>Discount on MRP</p>
+        <p>Cart Value</p>
+        <p>Delivery charges</p>
+        <button>Login</button>
+        <h3>Amount to be paid</h3>
+        </div>
+        <div>
+            <h3>Total Saving</h3>
+        </div>
+    </div>
     </div>
 </body>
 </html>

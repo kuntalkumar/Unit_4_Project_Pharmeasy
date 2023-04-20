@@ -6,45 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart Page</title>
     <style>
-        #upper {
+        #parent{
             display: flex;
-            width:60%;
-            border: 1px solid gray;
-            border-radius: 10px 10px 0 0;
+            gap:20px;
+            margin: auto;
+            padding-left: 20px;
+            padding-right: 20px;
         }
-        #last{
-            text-align: right;
-            margin-left: 450px;
-            justify-content: center;
+        /* left portion */
+        #upper >div{
+            margin-left: 20px;
+        }
+        #last {
             color: rgb(4, 165, 90);
+            margin-right: 20px;
         }
-       #parent >div{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        width:60%;
-        border: 1px solid gray;
+        #upper{
+            display: flex;
+            border: 1px solid lightgray;
+            border-radius: 10px 10px 0 0;
+            margin-left: 20px;
+            margin-top: 30px;
+            width:64.6%;
+            justify-content: space-between;
+        }
+       #left >div {
+        display: flex;
+        /* grid-template-columns: repeat(3,1fr); */
+        /* gap:105px; */
+        justify-content: space-between;
+        border: 1px solid lightgray;
         padding: auto;
+        font-size: 15px;
+        
+       }
+       #left{
+        width:100%;
        }
        img{
             align-items: center;
-            width:50%;
+            width:30%;
             padding:20px;
-            margin-right: 100px;
+            /* margin-right:-10%; */
         }
-        #parent div:nth-child(2)  p,h3{
-            width:150%;
+        #left >div>div:nth-child(2)  p,h3{
+            /* width:100%; */
             margin-top: -10px;
-            margin-left: -50px;
-            justify-content: center;
+            /* margin-left: -50px; */
         }
-         #parent div:nth-child(2) h3:first-child{
+         #left> div> div:nth-child(2) h3:first-child{
             padding-top:20px;
         }
-        #parent div:nth-child(3){
+        #left > div >div:nth-child(3){
             display: block;
             justify-content: end;
-            margin-left: 200px;
-            margin-right: -70px;
+            /* margin-left: 200px;
+            margin-right: -70px; */
             padding: 20px;
         }
         #qty{
@@ -64,7 +81,117 @@
         #img{
             width:20%;
             margin-top:-30px;
-
+        }
+        /* Right portion */
+        #right{
+            margin-top: -68px;
+            border-radius: 20px;
+            width:45%
+        }
+        #right>div{
+            padding:5px;
+            border: 1px solid lightgray;
+        }
+        #upperright{
+            border-radius: 10px 10px 0 0;
+            padding:10px;
+        }
+        /* #discount{
+            display:flex;
+            background-color: rgb(201, 243, 229);
+            border-radius: 10px;
+            font-size: 15px;
+            height: 12%;
+        } */
+        button{
+            background-color: darkgreen;
+            width:100%;
+            height: 35px;
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+        button:hover{
+             background-color:white;
+             color: black;
+        }
+        #applycoupon{
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+            align-items: center;
+            border: 1px solid lightgray;
+            height: 50px;
+        }
+        #cp{
+            align-items: center;
+            justify-content: center;
+            width:15%;
+        }
+        #text{
+            align-items: center;
+            margin-left: -100px;
+            padding-top: 15px;
+        }
+        #login{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: -20px;
+        }
+        #right div:nth-child(3){
+            padding:30px;
+            border-radius: 10px;
+        }
+        #right div:nth-child(3) h3{
+            margin-bottom: 20px;
+        }
+        #cartvalue{
+            margin-top: 50px;
+            margin-bottom: 25px;
+        } 
+        #del{
+            margin-bottom: 50px;
+        }
+        #del1{
+            background-color: darkgreen;
+            color: white;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        #del1:hover{
+            background-color:white;
+             color: black
+        }
+        #right div:nth-child(3) p{
+            color: grey;
+        }
+        #right div:nth-child(4){
+            padding:20px;
+            border: 1px dotted;
+            background-color: lightcyan;
+            height: 30px;
+        }
+        #bill{
+            margin-bottom: 40px;
+        }
+        /* #disc{
+            margin-bottom: 30px;
+        } */
+        #total_MRP,#disc_MRP,#Cart_val,#amtpaid{
+            display: flex;
+            justify-content: end;
+            margin-top: -20px;
+        }
+        #totalsave{
+            padding:18x;
+        }
+        #totalsave1{
+           margin-top: 30px;
+        }
+        #totalmrp{
+            margin-top: 50px;
         }
     </style>
 </head>
@@ -74,10 +201,11 @@
          <div><h2><span id="count">0</span> Items in your Cart</h2></div>
          <div><h4 id="last"> Saved for later</h4></div>
     </div>
+    <div id="parent">
     <!-- </div> -->
-    <img id="img" src="https://assets.pharmeasy.in/web-assets/images/icDelete.svg" alt="">
-    <div id="upper"></div>
-    <div id="parent"></div>
+    <!-- <img id="img" src="https://assets.pharmeasy.in/web-assets/images/icDelete.svg" alt=""> -->
+    <div id="left">
+    </div>
     <label for=""></label>
     <select name="" id="qty">
         <option value="1">1</option>
@@ -101,21 +229,72 @@
         <option value="19">19</option>
         <option value="20">20</option>
     </select>
+    <div id="right">
+        <!-- <div id="discount">
+            <img id="cp" src="https://assets.pharmeasy.in/web-assets/images/cartCoupon.svg" alt="">
+            <p>Use Code: OFF150 & Get FLAT Rs.150 OFF on medicines above Rs.1499</p>
+        </div> -->
+        <div id="upperright">
+            <h2>Cart Total: <span id="total"></span></h2>
+        </div>
+        <div>
+            <div id="applycoupon">
+            <img id="cp" src="https://assets.pharmeasy.in/web-assets/images/cartCoupon.svg" alt="">
+            <h3 id="text">Apply Coupon</h3>
+            </div>
+            <a href="http://127.0.0.1:5500/Signup%20signin/sign.html" target="_blank"><button id="delv" >Add Delivery Address</button></a>
+        </div>
+        <div>
+          <h3 id="bill">Bill Summary</h3>
+          <p id="totalmrp">Total MRP <span id="total_MRP">Rs</span>
+          </p>
+          <p id="disc">Discount on MRP <span id="disc_MRP"></span></p>
+          <p id="cartvalue">Cart Value <span id="Cart_val"></span></p>
+          <div id="login">
+          <p id="del">Delivery charges</p>
+          <!-- <a id="del1"href="https://pharmeasy.in/cart?src=header">Login</a> -->
+          <a  href="http://127.0.0.1:5500/Signup%20signin/sign.html" target="_blank"><h4 id="del1">Login to Check if you have Free Delivery</h4></a>
+          </div>
+          <h3>Amount to be paid <span id="amtpaid"></span></h3>
+        </div>
+        <div id="totalsave1">
+              <h3 id="totalsave">Total Saving <span id="total_saving"></span> on this order
+              </h3>
+        </div>
+    </div>
+</div>
 </body>
 </html>
 <script>
-var cart=JSON.parse(localStorage.getItem("cart"))||[];
-    if(cart.length>0){
-        displayCart();
-        updateCount(cart);
+    // var Robj=[
+    //   {
+    //     Name:"Bill Summary",
+    //     TotalMRP:"Total MRP",
+    //     DiscoutonMRP:"Discount on MRP",
+    //     CartVal:"Cart Value",
+    //     Deliverycharge:"login link",
+    //     image_url:"https://assets.pharmeasy.in/web-assets/images/gift.svg",
+    //     check:"Login to check if you have Free Delivery",
+    //     Amount:"Amount to be paid"
+    //   }
+    // ]
+var cartdata=JSON.parse(localStorage.getItem("cart"))||[];
+    if(cartdata.length>0){
+        displayCart(cartdata);
+        updateCount(cartdata);
+        // caltotal();
     }
     else{
-        document.getElementById("parent").textContent="No Items Present in Cart";
+        document.getElementById("left").textContent="No Items Present in Cart";
     }
-   
-    function displayCart(){
-        cart.map(function(elem){
-            var div=document.createElement("div");
+    var sum=0;
+    var sum1=0;
+    var sum2=0;
+    var discount=0;
+    displayCart(cartdata);
+    function displayCart(cartdata){
+        cartdata.map(function(elem,i){
+            var left=document.createElement("div");
         
             var imgbox=document.createElement("div");
 
@@ -135,40 +314,124 @@ var cart=JSON.parse(localStorage.getItem("cart"))||[];
             desc.textContent=elem.desc
 
             var MRP=document.createElement("h3");
-            MRP.textContent=elem.MRP;
+            MRP.textContent="MRP Rs"+elem.MRP;
+            sum1 += parseInt(elem.MRP) ;
+            document.getElementById("total_MRP").textContent="Rs"+sum1;
+
+            var Price=document.createElement("h3");
+            Price.textContent="Rs"+elem.Price;
+            sum += parseInt(elem.Price) ;
+            document.getElementById("total").textContent ="Rs"+ sum ;
+            document.getElementById("Cart_val").textContent="Rs"+sum;
+            document.getElementById("amtpaid").textContent="Rs"+sum;
 
             var Delivery=document.createElement("p");
             Delivery.textContent=elem.Delivery;
 
-            var option=document.createElement("div")
+            var option=document.createElement("div");
 
-            var button=document.getElementById("img");
+            var button=document.createElement("button")
+            button.textContent="delete";
+            button.addEventListener("click",function(){
+            deleteFun(elem,i)
+          })
 
             var qty=document.getElementById("qty");
-
-            itembox.append(name,owner,desc,MRP,Delivery);
+            
+            itembox.append(name,owner,desc,MRP,Price,Delivery);
             imgbox.append(image);
             option.append(button,qty)
+            
+            left.append(imgbox,itembox,option);
+            document.getElementById("left").append(left);
+            
+            discount=elem.Price-elem.MRP;
+             sum2+=parseInt(discount) ;
+             document.getElementById("disc_MRP").textContent="Rs"+sum2;
+             document.getElementById("total_saving").textContent="Rs"+(-sum2);
+            
+        })
+}
+console.log(sum);
+console.log(cartdata);
+            // function displaybuy(Robj){
+            //     Robj.map(function(elem,i){
+            // // Right part
+            // var right=document.createElement(div);
+            
+            // var 
+            // var Name=document.createElement("h3");
+            // Name.textContent="Bill Summary";
 
-            div.append(imgbox,itembox,option);
-            document.getElementById("parent").append(div);
-    })
- }
+            // var TotalMRP=document.createElement("h4");
+            // TotalMRP.textContent="Total MRP"+elem.MRP;
+
+            // var DiscoutonMRP=document.createElement("h4");
+            // DiscoutonMRP.textContent="Discount on MRP";
+
+            // var  CartVal=document.createElement("h4");
+            // CartVal.textContent="Cart Value";
+
+            // var Deliverycharge=document.createElement("h4");
+            // Deliverycharge.textContent="Delivery Charges";
+
+            // var freedel=document.createElement("div");
+
+            // var image1=document.createElement("img");
+            // image1.setAttribute("src",elem.image_url);
+            // image1.setAttribute("alt",elem.name);
+
+            // var check=document.createElement("p");
+            // check.textContent="Login to check if you have Free Delivery";
+
+            // var Amount=document.createElement("h3");
+            // Amount.textContent="Amount to be paid";
+
+            // freedel.append(image1,check);
+            // right.append(Name,TotalMRP,DiscoutonMRP,CartVal,Deliverycharge,freedel,Amount);
+            // document.getElementById("right").append(right);
+            //     })
+            //     }
+        // var delArr=JSON.parse(localStorage.getItem("delete-list"))||[];
+        function deleteFun(elem,i){
+        // delArr.push(elem);
+        cartdata.splice(i,1)
+        localStorage.setItem("cart",JSON.stringify(cartdata));
+        displayCart(cartdata);
+        updateCount(cartdata);
+        cartdata.map(function(elem,i){
+            sum -= parseInt(elem.Price) ;
+        })
+        cartdata.map(function(elem,i){
+            sum1 -= parseInt(elem.MRP) ;
+        })
+        }
+// displayimage(obj)
+// function displayimage(obj){
+//         obj.map(function(elem){
+//         var button=document.createElement("img");
+//         image.setAttribute("src",elem.image_url);
+//         image.setAttribute("alt",elem.name);
+//  })
+// }
+
 //     function caltotal(){
-//     var total=cart.reduce(function(acc,currEl){
-//         return acc+currEl.finalprice;
+//     var total=cartdata.reduce(function(acc,currEl){
+//         return acc+currEl.Price;
 //     },0)
-//     var div=document.createElement("div");
-//     div.setAttribute("id","cart");
+//     // var div=document.createElement("div");
+//     // div.setAttribute("id","cart");
 
-//     var p=document.createElement("p1");
-//     p1.textContent="Cart Total";
+//     // var p=document.createElement("p1");
+//     // p1.textContent="Cart Total";
 
-//     var p1=document.createElement("p1");
-//     p1.textContent= "Rs" + total;
-//     div.append(p,p1);
-//     document.querySelector("body").append(div);
+//     // var p1=document.createElement("p1");
+//     // p1.textContent= "Rs" + total;
+//     // div.append(p,p1);
+//     // document.querySelector("body").append(div);
 //     console.log(total);
+//     document.getElementById("total").textContent=parseInt(total);
+//     displayCart();
 // }
     function updateCount(data){
         document.getElementById("count").textContent=data.length;
