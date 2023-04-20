@@ -143,7 +143,7 @@
                      <span>city :</span>
                      <input
                         type="text"
-                        placeholder="mumbai"
+                        placeholder="Madanapalli"
                         name="city"
                         onchange="handleChange(this.value,this.name)"
                      />
@@ -353,10 +353,10 @@
          alert("Card Number is required..!");
       } else if (cardNumber.length != 16) {
          alert("Enter a valid number which is having 16 number..!");
-      } else if (!expMonth) {
-         alert("Expirt Month is required..!");
-      } else if (!expYear) {
-         alert("Expirt Year is required..!");
+      } else if ( expMonth) {
+         alert("Expire Month is required..!");
+      } else if (expYear.length !=3) {
+         alert("Enter atleat 3 characters..!");
       } else if (!cvv) {
          alert("Cvv is required..!");
       }
