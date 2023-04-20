@@ -34,4 +34,9 @@ function fun(){
 }
 document.getElementById("EnterAddress").textContent= JSON.parse(localStorage.getItem("location"));  
 
+document.getElementById("cart").addEventListener("click",mycart);
+
+function mycart(){
+  alert("Login first ")
+}
 
