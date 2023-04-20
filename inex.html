@@ -4,142 +4,243 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PAYMENT</title>
-    <link rel="stylesheet" href="styless.css">
+    <title>Payment page</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:25px;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #d1d9d5 60%, #535554 40.1%);
+}
+
+.container form{
+  padding:20px;
+  width:1000px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+
+.container form .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:15px;
+}
+
+.container form .row .col{
+  flex:1 1 250px;
+}
+
+.container form .row .col .title{
+  font-size: 20px;
+  color:#333;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.container form .row .col .inputBox{
+  margin:15px 0;
+}
+
+.container form .row .col .inputBox span{
+  margin-bottom: 10px;
+  display: block;
+}
+
+.container form .row .col .inputBox input{
+  width: 100%;
+  border:1px solid #ccc;
+  padding:10px 15px;
+  font-size: 15px;
+  text-transform: none;
+}
+
+.container form .row .col .inputBox input:focus{
+  border:1px solid #000;
+}
+
+.container form .row .col .flex{
+  display: flex;
+  gap:15px;
+}
+
+.container form .row .col .flex .inputBox{
+  margin-top: 5px;
+}
+
+.container form .row .col .inputBox img{
+  height: 34px;
+  margin-top: 5px;
+  filter: drop-shadow(0 0 1px #000);
+}
+
+.container form .submit-btn{
+  width: 100%;
+  padding:12px;
+  font-size: 17px;
+  background: #27ae60;
+  color:#fff;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.container form .submit-btn:hover{
+  background: #c3d6cb;
+}
+
+    </style>
 </head>
 <body>
-    <div class="row">
-        <div class="col-75">
-          <div class="container">
-            <form action>
-      
-              <div class="row">
-                <div class="col-50">
-                  <h3>Billing Address</h3>
-                  <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-                  <input type="text" id="fname" name="firstname" placeholder="enter your name">
-                  <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                  <input type="text" id="email" name="email" placeholder="Enter mail ">
-                  <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-                  <input type="text" id="adr" name="address" placeholder=" YOur street">
-                  <label for="city"><i class="fa fa-institution"></i> City</label>
-                  <input type="text" id="city" name="city" placeholder="Your city">
-                  <label for="country"><i class="fa fa-institution"></i> Country</label>
-                  <input type="text" id="country" name="country" placeholder="India">
-      
-                  <div class="row">
-                    <div class="col-50">
-                      <label for="state">State</label>
-                      <input type="text" id="state" name="state" placeholder="Your State">
+
+    <div class="container">
+
+        <form action="">
+    
+            <div class="row">
+    
+                <div class="col">
+    
+                    <h3 class="title">billing address</h3>
+    
+                    <div class="inputBox">
+                        <span>full name :</span>
+                        <input type="text" placeholder="full name">
                     </div>
-                    <div class="col-50">
-                      <label for="zip">Zip</label>
-                      <input type="text" id="zip" name="zip" placeholder="------">
+                    <div class="inputBox">
+                        <span>email :</span>
+                        <input type="email" placeholder="example@example.com">
                     </div>
-                  </div>
+                    <div class="inputBox">
+                        <span>address :</span>
+                        <input type="text" placeholder="room - street - locality">
+                    </div>
+                    <div class="inputBox">
+                        <span>city :</span>
+                        <input type="text" placeholder="mumbai">
+                    </div>
+    
+                    <div class="flex">
+                        <div class="inputBox">
+                           
+                            <div>
+                                <label>State</label>
+                                <select name=" " id="">
+                                    <option>Andhra Pradesh</option>
+
+                                        <option> Arunachal Pradesh</option>
+                                        <option> Assam</option>
+                                        <option> Bihar</option>
+                                        <option> Chhattisgarh</option>
+                                        <option> Goa</option>
+                                        <option>  Gujarat</option>
+                                        <option>  Haryana</option>
+                                        <option> Himachal Pradesh</option>
+                                        <option> Jharkhand</option>
+                                        <option> Karnataka</option>
+                                        <option>  Kerala</option>
+                                        <option>  Madhya Pradesh</option>
+                                        <option>  Maharashtra</option>
+                                        <option>  Manipur</option>
+                                        <option> Meghalaya</option>
+                                        <option> Mizoram</option>
+                                        <option> Nagaland</option>
+                                        <option> Odisha</option>
+                                        <option> Punjab</option>
+                                        <option> Rajasthan</option>
+                                        <option> Sikkim</option>
+                                        <option> Tamil Nadu</option>
+                                        <option>Telangana</option>
+                                        <option> Tripura</option>
+                                        <option>Uttar Pradesh</option>
+                                        <option>Uttarakhand</option>
+                                        <option> West Bengal                                        </option>
+
+                                        
+                                        
+                                </select>
+                            </div>
+                            <!-- <input type="text" placeholder="india"> -->
+                        </div>
+                        <div class="inputBox">
+                            <span>zip code :</span>
+                            <input type="text" placeholder="123 456">
+                        </div>
+                    </div>
+    
                 </div>
+    
+                <div class="col">
+    
+                    <h3 class="title">payment</h3>
+                    <div>
+                        <label for="">OPTIONS</label>
+                        <select name="" id="">
+                            <option value="">UPI pay</option>
+                            <option value="">Wallet</option>
 
-                <!-- <button id="addaddresss">Add Address</button> -->
-                
+                            <option value="">COD </option>
 
+                            <option value="">PAY LATER</option>
 
-              
-
-      
-                <div class="payment">
-                  <h3>Payment</h3>
-
-
-                  <div>
-                    <h5>Add new UPI</h5>
-                    <!-- <label for="UPI">UPI</label> -->
-                    <input  id="upi" name="UPI PAYMENT" placeholder="0000000000@ybl" >
-                    <button id="btn">Proceed Payment</button>
-                  </div>
-
-                  <hr>
-
-                  <div class="cards">
-
-
-
-
-                  <label for="fname">Accepted Cards</label>
-                  <div class="icon-container">
-                    <span ></span ><img class="logos" src="https://consumer-app-images.pharmeasy.in/payment-icons/visa.png" alt="visa"></span>
-                    <span ></span><img class="logos" src="https://consumer-app-images.pharmeasy.in/payment-icons/mastercard-logo.png" alt="mastercard"></span>
-                    <span ></span><img class="logos" src="https://consumer-app-images.pharmeasy.in/payment-icons/rupay.png" alt="rupay"></span>
-                    <span ></span><img class="logos" src="https://consumer-app-images.pharmeasy.in/payment-icons/maestro-logo.png" alt="maestro-logo"></span>
-                    <span ></span><img class="logos5" src="https://consumer-app-images.pharmeasy.in/payment-icons/dinerCard.png" alt="dinerCard"></span>
-                    <br><hr>
-
-                    <!-- <i class="fa fa-cc-visa" style="color:navy;"></i>
-                    <i class="fa fa-cc-amex" style="color:blue;"></i>
-                    <i class="fa fa-cc-mastercard" style="color:red;"></i>
-                    <i class="fa fa-cc-discover" style="color:orange;"></i> -->
-                  </div>
-                  <label for="cname">Name on Card</label>
-                  <input type="text" id="cname" name="cardname" placeholder="XXXXXXXXXXXXXX">
-                  <label for="ccnum">Credit card number</label>
-                  <input type="text" id="ccnum" name="cardnumber" placeholder="0000-0000-0000-0000">
-                  <label for="expmonth">Exp Month</label>
-                  <input type="text" id="expmonth" name="expmonth" placeholder="">
-      
-                  <div class="row">
-                    <div class="col-50">
-                      <label for="expyear">Exp Year</label>
-                      <input type="text" id="expyear" name="expyear" placeholder="2030">
+                            
+                        </select>
                     </div>
-                    <div class="col-50">
-                      <label for="cvv">CVV</label>
-                      <input type="text" id="cvv" name="cvv" placeholder="000">
+
+    
+                    <div class="inputBox">
+                        <span>cards accepted :</span>
+                        <img src="https://consumer-app-images.pharmeasy.in/payment-icons/visa.png" alt="visa">
+                        <img src="https://consumer-app-images.pharmeasy.in/payment-icons/mastercard-logo.png" alt="master card">
+                        <img src="https://consumer-app-images.pharmeasy.in/payment-icons/rupay.png" alt="rupay">
+                        <img src="https://consumer-app-images.pharmeasy.in/payment-icons/maestro-logo.png" alt="maestro-logo">
+                        <img src="https://consumer-app-images.pharmeasy.in/payment-icons/dinerCard.png" alt="dinerCard">
                     </div>
-                  </div>
-                  <br>
-                  <hr>  
-
-                  <div>
-                    <label for="other opitions">OTHER OPITIONS FOR PAYMENT</label>
-
-                    <h3>Wallets</h3>
-                    <br>
-
-                    <img class="wall" src="https://cdn.pharmeasy.in/payments/paytm-02.png" alt="paytm">
-                    <img class="wall" src="https://cdn.pharmeasy.in/payments/freecharge.png" alt="freecharge">
-                    <img class="wall" src="https://cdn.pharmeasy.in/payments/phonepe-upi.png" alt="phonepay">
-                    <img class="wall" src="https://cdn.pharmeasy.in/payments/amazonpay_new.png" alt="amazonpay">
-                    
-                  </div>
-                  <br><hr>
-
-                  <div>
-
-                    <!-- <h3>CASH ON DELEVIRY</h3> -->
-                    <label for="text">CASH ON DELEVIRY</label>
-                    <!-- <input type="text" placeholder="pay by cash"> -->
-                    
-                    <button>pay by cash</button>
-
-                    
-
-
-                  </div>
-
-                  <br><hr>
+                    <div class="inputBox">
+                        <span>name on card :</span>
+                        <input type="text" placeholder="As per On Card">
+                    </div>
+                    <div class="inputBox">
+                        <span>credit card number :</span>
+                        <input type="number" placeholder="0000-0000-0000-0000">
+                    </div>
+                    <div class="inputBox">
+                        <span>exp month :</span>
+                        <input type="text" placeholder="january">
+                    </div>
+    
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>exp year :</span>
+                            <input type="number" placeholder="2022">
+                        </div>
+                        <div class="inputBox">
+                            <span>CVV :</span>
+                            <input type="text" placeholder="1234">
+                        </div>
+                    </div>
+    
                 </div>
-                </div>
-      
-              </div>
-              <label>
-                <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
-              </label>
-              <input type="submit" value="Continue to checkout" class="btn">
-            </form>
-          </div>
-        </div>
-      
-       
-      </div>
+        
+            </div>
+    
+            <input type="submit" value="proceed to checkout" class="submit-btn">
+    
+        </form>
+    
+    </div>  
     
 </body>
 </html>
