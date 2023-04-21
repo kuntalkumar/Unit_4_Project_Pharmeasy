@@ -10,7 +10,7 @@
    
       #lheading{
         display: flex;
-        gap: 50px;
+        gap: 30px;
       }
       #heading{
         display: flex;
@@ -73,16 +73,29 @@
 
   }
   #deliver{
+    padding-left: 15px;
+
     margin-top: -10px;
     margin-bottom: -35px;
+    color: rgb(126, 116, 104);
   }
  
   #EnterAddress{
     margin-top: -10px;
+
     padding-left: 10px;
+
     /* margin-bottom: 50px; */
     color:rgb(36, 36, 62)
   }
+  h4{
+    margin-top: -10px;
+    /* margin-bottom: 50px; */
+    color:rgb(36, 36, 62)
+  }
+  /* h4:hover{
+    display: none;
+  } */
   
       /* ****************************************Style for nav*************************************************************************** */
   
@@ -410,7 +423,14 @@ gap: 10px;
 
 }
 #payment_partners{
-  flex-direction: column;
+  /* flex-direction: column; */
+display: grid;
+grid-template-columns: repeat(4,1fr);
+}
+#payment{
+    margin-top: 50px;
+
+
 }
 }
 

@@ -1,42 +1,48 @@
+kk()
 
-// var medicine=document.getElementById("medicine").value;
-// var labTest=document.getElementById("labTest").value;
-// var healthcare=document.getElementById("healthcare").value;
-// var healthBlog=document.getElementById("healthBlog").value;
-// var plus=document.getElementById("plus").value;
-// var offer=document.getElementById("offer").value;
-// var valueStore=document.getElementById("valueStore").value;
-// var arr=[]
-// var obj={
-    
-//     medicine:medicine,
-//     labTest:labTest,
-//     healthcare:healthcare,
-//     healthBlog:healthBlog,
-//     plus:plus,
-//     offer:offer,
-//     valueStore:valueStore
+function kk(){
+  document.querySelector("h4").textContent= "Enter your address";
 
-// }
-// arr.push(obj);
-// console.log(arr);
+}
+
+
+
 
 
 document.getElementById("deliver").addEventListener("click",fun);
 
-//  var addresses=
+ var addresses="";
+
+
 //  console.log(addresses)
 function fun(){
- var addresses= prompt("Please Enter your address");
+  addresses= prompt("Please Enter your address");
   localStorage.setItem("location",JSON.stringify(addresses));
-  document.getElementById("EnterAddress").textContent= addresses;  
+    // document.getElementById("EnterAddress").textContent= addresses; 
 
-}
-document.getElementById("EnterAddress").textContent= JSON.parse(localStorage.getItem("location"));  
 
+     }
+    
+
+// document.getElementById("EnterAddress").textContent= addresses; 
+// document.querySelector("h4").textContent= "";
+
+
+var kk=JSON.parse(localStorage.getItem("location"));
+console.log(kk); 
+// document.getElementById("EnterAddress").textContent= kk;
 document.getElementById("cart").addEventListener("click",mycart);
 
 function mycart(){
   alert("Login first ")
 }
 
+
+
+document.getElementById("login").addEventListener("click", findUser);
+
+     function findUser(){
+
+      localStorage.setItem("userName",JSON.stringify("userName"));
+
+     }

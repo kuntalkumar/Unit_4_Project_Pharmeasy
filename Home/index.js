@@ -22,16 +22,45 @@
 // console.log(arr);
 
 
- document.getElementById("deliver").addEventListener("click",fun);
+document.getElementById("deliver").addEventListener("click",fun);
 
-//  var addresses=
+ var addresses="";
 //  console.log(addresses)
 function fun(){
- var addresses= prompt("Please Enter your address");
+  addresses= prompt("Please Enter your address");
   localStorage.setItem("location",JSON.stringify(addresses));
-  document.getElementById("EnterAddress").textContent= addresses;  
+    // document.querySelector("h4").textContent= "";
+    document.getElementById("EnterAddress").textContent= addresses; 
+
+    // document.getElementById("express").textContent= "Deliver to ";
 
 }
-document.getElementById("EnterAddress").textContent= JSON.parse(localStorage.getItem("location"));  
+document.getElementById("EnterAddress").textContent= addresses; 
+// document.querySelector("h4").textContent= "";
+
+// document.querySelector("h4").textContent= "";
 
 
+
+var kk="";
+kk=JSON.parse(localStorage.getItem("location"));
+// console.log(kk); 
+document.getElementById("EnterAddress").textContent= kk;
+  // document.getElementById("cart").addEventListener("click",mycart);
+
+// document.getElementById("login").addEventListener("click", findUser);
+
+// function findUser(){
+
+//  var userName="kuntal"
+var adBM=JSON.parse(localStorage.getItem("userName"));
+
+// } 
+ user();
+
+function user(){
+
+document.getElementById("login").innerText=adBM; 
+console.log(adBM);
+
+}
