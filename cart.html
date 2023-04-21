@@ -27,38 +27,56 @@
             border-radius: 10px 10px 0 0;
             margin-left: 20px;
             margin-top: 30px;
-            width:64.6%;
+            width:60%;
             justify-content: space-between;
         }
        #left >div {
         display: flex;
-        /* grid-template-columns: repeat(3,1fr); */
-        /* gap:105px; */
+        /* display: grid;
+        grid-template-columns: repeat(3,1fr);  */
         justify-content: space-between;
         border: 1px solid lightgray;
         padding: auto;
-        font-size: 15px;
-        
+        font-size: 15px; 
        }
        #left{
-        width:100%;
+        width:70%;
        }
        img{
             align-items: center;
             width:30%;
             padding:20px;
-            /* margin-right:-10%; */
+            /* margin-right:-200px; */
         }
-        #left >div>div:nth-child(2)  p,h3{
+        #left>div:first-child{
+            border-radius: 10px 10px 0 0;
+        }
+        #left>div:first-child h2,h4{
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        #left>div:first-child h4{
+            color: rgb(4, 165, 90);
+        }
+        #left >div>div:nth-child(2) p{
+            color:gray;
+        }
+        #left >div>div:nth-child(2) h3{
+            color:rgb(61, 60, 60)
+        }
+        #left >div>div:nth-child(2) > p,h3{
             /* width:100%; */
             margin-top: -10px;
-            /* margin-left: -50px; */
+            /* margin-left: -300px; */
+            justify-content: center;
+            /* margin:auto; */
+            /* width:150%; */
         }
          #left> div> div:nth-child(2) h3:first-child{
             padding-top:20px;
         }
         #left > div >div:nth-child(3){
-            display: block;
+            /* display: block; */
             justify-content: end;
             /* margin-left: 200px;
             margin-right: -70px; */
@@ -67,10 +85,10 @@
         #qty{
             border: 1px solid gray;
             padding: 10px;
-            padding-right: 20px;
+            /* padding-right: 20px; */
             border-radius: 10px;
-            width:50px;
-            margin-top: 50px;
+            width:80px;
+            /* margin-top: 50px; */
         } 
         #home{
             color:black;
@@ -84,7 +102,7 @@
         }
         /* Right portion */
         #right{
-            margin-top: -68px;
+            /* margin-top: -68px; */
             border-radius: 20px;
             width:45%
         }
@@ -96,6 +114,9 @@
             border-radius: 10px 10px 0 0;
             padding:10px;
         }
+        #carttotal{
+            padding-left:20px;
+        }
         /* #discount{
             display:flex;
             background-color: rgb(201, 243, 229);
@@ -104,7 +125,7 @@
             height: 12%;
         } */
         button{
-            background-color: darkgreen;
+            background-color:#085c58;
             width:100%;
             height: 35px;
             border-radius: 10px;
@@ -113,8 +134,8 @@
             margin-top: 10px;
         }
         button:hover{
-             background-color:white;
-             color: black;
+             background-color:#08726d;
+             color: white
         }
         #applycoupon{
             display:grid;
@@ -124,8 +145,11 @@
             height: 50px;
         }
         #cp{
+            display:flex;
             align-items: center;
             justify-content: center;
+            margin: auto;
+            padding-bottom: 50px;
             width:15%;
         }
         #text{
@@ -154,15 +178,15 @@
             margin-bottom: 50px;
         }
         #del1{
-            background-color: darkgreen;
+            background-color: #085c58;
             color: white;
             border: 1px solid black;
             border-radius: 10px;
             padding: 10px;
         }
         #del1:hover{
-            background-color:white;
-             color: black
+            background-color:#08726d;
+             color: white
         }
         #right div:nth-child(3) p{
             color: grey;
@@ -175,6 +199,7 @@
         }
         #bill{
             margin-bottom: 40px;
+            font-size: 20px;
         }
         /* #disc{
             margin-bottom: 30px;
@@ -185,57 +210,62 @@
             margin-top: -20px;
         }
         #totalsave{
-            padding:18x;
+            padding-top:-10px;
+            /* padding-top:-50px; */
         }
         #totalsave1{
-           margin-top: 30px;
+           font-size: 13px;
         }
         #totalmrp{
             margin-top: 50px;
+        }
+        #amt{
+            font-size: 20px;
         }
     </style>
 </head>
 <body>
     <a href="https://pharmeasy.in/" id="home">Home</a>
-    <div id="upper">
+    <!-- <div id="upper">
          <div><h2><span id="count">0</span> Items in your Cart</h2></div>
-         <div><h4 id="last"> Saved for later</h4></div>
-    </div>
+         <div><h4 id="last" onclick="clickme()"> Saved for later</h4></div>
+    </div> -->
     <div id="parent">
     <!-- </div> -->
     <!-- <img id="img" src="https://assets.pharmeasy.in/web-assets/images/icDelete.svg" alt=""> -->
     <div id="left">
     </div>
-    <label for=""></label>
-    <select name="" id="qty">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
-        <option value="13">13</option>
-        <option value="14">14</option>
-        <option value="15">15</option>
-        <option value="16">16</option>
-        <option value="17">17</option>
-        <option value="18">18</option>
-        <option value="19">19</option>
-        <option value="20">20</option>
-    </select>
+    <!-- <form name="Myform">
+        <select name="Qty"id="qty">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>1</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            </select>
+        </form> -->
     <div id="right">
         <!-- <div id="discount">
             <img id="cp" src="https://assets.pharmeasy.in/web-assets/images/cartCoupon.svg" alt="">
             <p>Use Code: OFF150 & Get FLAT Rs.150 OFF on medicines above Rs.1499</p>
         </div> -->
         <div id="upperright">
-            <h2>Cart Total: <span id="total"></span></h2>
+            <h2 id="carttotal">Cart Total: <span id="total"></span></h2>
         </div>
         <div>
             <div id="applycoupon">
@@ -245,7 +275,7 @@
             <a href="http://127.0.0.1:5500/Signup%20signin/sign.html" target="_blank"><button id="delv" >Add Delivery Address</button></a>
         </div>
         <div>
-          <h3 id="bill">Bill Summary</h3>
+          <h2 id="bill">Bill Summary</h2>
           <p id="totalmrp">Total MRP <span id="total_MRP">Rs</span>
           </p>
           <p id="disc">Discount on MRP <span id="disc_MRP"></span></p>
@@ -255,11 +285,11 @@
           <!-- <a id="del1"href="https://pharmeasy.in/cart?src=header">Login</a> -->
           <a  href="http://127.0.0.1:5500/Signup%20signin/sign.html" target="_blank"><h4 id="del1">Login to Check if you have Free Delivery</h4></a>
           </div>
-          <h3>Amount to be paid <span id="amtpaid"></span></h3>
+          <h2 id="amt">Amount to be paid <span id="amtpaid"></span></h2>
         </div>
         <div id="totalsave1">
-              <h3 id="totalsave">Total Saving <span id="total_saving"></span> on this order
-              </h3>
+              <h2 id="totalsave">Total Saving <span id="total_saving"></span> on this order
+              </h2>
         </div>
     </div>
 </div>
@@ -281,11 +311,11 @@
 var cartdata=JSON.parse(localStorage.getItem("cart"))||[];
     if(cartdata.length>0){
         displayCart(cartdata);
-        updateCount(cartdata);
+        // updateCount(cartdata);
         // caltotal();
     }
     else{
-        document.getElementById("left").textContent="No Items Present in Cart";
+        document.getElementById("left").textContent="Deliver to 400001 Mumbai";
     }
     var sum=0;
     var sum1=0;
@@ -293,7 +323,19 @@ var cartdata=JSON.parse(localStorage.getItem("cart"))||[];
     var discount=0;
     displayCart(cartdata);
     function displayCart(cartdata){
+        document.getElementById("left").textContent = "" ;
+        var upperleft=document.createElement("div");
+
+        var item=document.createElement("h2");
+        item.textContent=cartdata.length+" Items in your Cart";
+
+        var save=document.createElement("h4");
+        save.textContent="Save for later";
+
+        upperleft.append(item,save);
+        document.getElementById("left").append(upperleft);
         cartdata.map(function(elem,i){
+
             var left=document.createElement("div");
         
             var imgbox=document.createElement("div");
@@ -314,16 +356,19 @@ var cartdata=JSON.parse(localStorage.getItem("cart"))||[];
             desc.textContent=elem.desc
 
             var MRP=document.createElement("h3");
-            MRP.textContent="MRP Rs"+elem.MRP;
+            MRP.textContent="MRP Rs "+elem.MRP;
+            MRP.style.textDecoration="line-through"
             sum1 += parseInt(elem.MRP) ;
-            document.getElementById("total_MRP").textContent="Rs"+sum1;
+            document.getElementById("total_MRP").textContent="Rs "+sum1;
+            
+            
 
             var Price=document.createElement("h3");
-            Price.textContent="Rs"+elem.Price;
+            Price.textContent="Rs "+elem.Price;
             sum += parseInt(elem.Price) ;
-            document.getElementById("total").textContent ="Rs"+ sum ;
-            document.getElementById("Cart_val").textContent="Rs"+sum;
-            document.getElementById("amtpaid").textContent="Rs"+sum;
+            document.getElementById("total").textContent ="Rs "+ sum ;
+            document.getElementById("Cart_val").textContent="Rs "+sum;
+            document.getElementById("amtpaid").textContent="Rs "+sum;
 
             var Delivery=document.createElement("p");
             Delivery.textContent=elem.Delivery;
@@ -335,20 +380,19 @@ var cartdata=JSON.parse(localStorage.getItem("cart"))||[];
             button.addEventListener("click",function(){
             deleteFun(elem,i)
           })
-
-            var qty=document.getElementById("qty");
-            
+            // var Qty=document.createElement("select");
+             
             itembox.append(name,owner,desc,MRP,Price,Delivery);
             imgbox.append(image);
-            option.append(button,qty)
+            option.append(button)
             
             left.append(imgbox,itembox,option);
             document.getElementById("left").append(left);
             
             discount=elem.Price-elem.MRP;
              sum2+=parseInt(discount) ;
-             document.getElementById("disc_MRP").textContent="Rs"+sum2;
-             document.getElementById("total_saving").textContent="Rs"+(-sum2);
+             document.getElementById("disc_MRP").textContent="Rs "+sum2;
+             document.getElementById("total_saving").textContent="Rs "+(-sum2);
             
         })
 }
@@ -398,7 +442,7 @@ console.log(cartdata);
         cartdata.splice(i,1)
         localStorage.setItem("cart",JSON.stringify(cartdata));
         displayCart(cartdata);
-        updateCount(cartdata);
+        // updateCount(cartdata);
         cartdata.map(function(elem,i){
             sum -= parseInt(elem.Price) ;
         })
@@ -406,14 +450,7 @@ console.log(cartdata);
             sum1 -= parseInt(elem.MRP) ;
         })
         }
-// displayimage(obj)
-// function displayimage(obj){
-//         obj.map(function(elem){
-//         var button=document.createElement("img");
-//         image.setAttribute("src",elem.image_url);
-//         image.setAttribute("alt",elem.name);
-//  })
-// }
+
 
 //     function caltotal(){
 //     var total=cartdata.reduce(function(acc,currEl){
@@ -433,7 +470,10 @@ console.log(cartdata);
 //     document.getElementById("total").textContent=parseInt(total);
 //     displayCart();
 // }
-    function updateCount(data){
-        document.getElementById("count").textContent=data.length;
+    // function updateCount(data){
+    //     document.getElementById("count").textContent=data.length;
+    // }
+    function clickme(){
+        alert("Please Enter Mobile Number")
     }
 </script>
