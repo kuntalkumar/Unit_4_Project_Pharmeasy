@@ -125,7 +125,7 @@
             height: 12%;
         } */
         button{
-            background-color:#085c58;
+            background-color:#087772;
             width:100%;
             height: 35px;
             border-radius: 10px;
@@ -138,24 +138,21 @@
              color: white
         }
         #applycoupon{
-            display:grid;
-            grid-template-columns: repeat(2,1fr);
+            display:flex;
+            /* grid-template-columns: repeat(2,1fr); */
             align-items: center;
             border: 1px solid lightgray;
             height: 50px;
         }
         #cp{
-            display:flex;
             align-items: center;
             justify-content: center;
-            margin: auto;
-            padding-bottom: 50px;
-            width:15%;
+            padding-bottom: 20px;
+            width:8%;
         }
         #text{
             align-items: center;
-            margin-left: -100px;
-            padding-top: 15px;
+            padding-top: 25px;
         }
         #login{
             display: flex;
@@ -178,16 +175,18 @@
             margin-bottom: 50px;
         }
         #del1{
-            background-color: #085c58;
-            color: white;
+            background-color: rgb(35, 20, 54);
             border: 1px solid black;
             border-radius: 10px;
             padding: 10px;
         }
-        #del1:hover{
+        #del1>p{
+            color: black;
+        }
+        /* #del1:hover{
             background-color:#08726d;
              color: white
-        }
+        } */
         #right div:nth-child(3) p{
             color: grey;
         }
@@ -221,6 +220,13 @@
         }
         #amt{
             font-size: 20px;
+        }
+        select{
+            margin-top: 30px;
+            width:90%;
+            border: 1px solid lightgray;
+            border-radius: 10px;
+            padding:8px;
         }
     </style>
 </head>
@@ -283,7 +289,7 @@
           <div id="login">
           <p id="del">Delivery charges</p>
           <!-- <a id="del1"href="https://pharmeasy.in/cart?src=header">Login</a> -->
-          <a  href="http://127.0.0.1:5500/Signup%20signin/sign.html" target="_blank"><h4 id="del1">Login to Check if you have Free Delivery</h4></a>
+          <a  href="http://127.0.0.1:5500/Signup%20signin/sign.html" target="_blank"><p id="del1">Login to Check if you have Free Delivery</p></a>
           </div>
           <h2 id="amt">Amount to be paid <span id="amtpaid"></span></h2>
         </div>
@@ -353,7 +359,7 @@ var cartdata=JSON.parse(localStorage.getItem("cart"))||[];
             owner.textContent=elem.owner;
 
             var desc=document.createElement("p");
-            desc.textContent=elem.desc
+            desc.textContent=elem.desc;
 
             var MRP=document.createElement("h3");
             MRP.textContent="MRP Rs "+elem.MRP;
@@ -361,8 +367,6 @@ var cartdata=JSON.parse(localStorage.getItem("cart"))||[];
             sum1 += parseInt(elem.MRP) ;
             document.getElementById("total_MRP").textContent="Rs "+sum1;
             
-            
-
             var Price=document.createElement("h3");
             Price.textContent="Rs "+elem.Price;
             sum += parseInt(elem.Price) ;
@@ -375,21 +379,35 @@ var cartdata=JSON.parse(localStorage.getItem("cart"))||[];
 
             var option=document.createElement("div");
 
-            var button=document.createElement("button")
+        //     var button=document.createElement("img")
+        //     button.setAttribute("src","https://assets.pharmeasy.in/web-assets/images/icDelete.svg");
+        //     button.setAttribute("alt","delete");
+        //     button.style.width="30px";
+        //     button.addEventListener("click",function(){
+        //     deleteFun(elem,i);
+        //   })
+        var button=document.createElement("button")
             button.textContent="delete";
             button.addEventListener("click",function(){
             deleteFun(elem,i)
           })
-            // var Qty=document.createElement("select");
-             
+
+            var Qty=document.createElement("select");
+            var arr=["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"];
+            for(var i=0;i<arr.length;i++){
+                var option1=document.createElement("option");
+                option1.text=arr[i];
+                Qty.append(option1);
+            }
+            console.log(Qty)
             itembox.append(name,owner,desc,MRP,Price,Delivery);
             imgbox.append(image);
-            option.append(button)
+            option.append(button,Qty);
             
             left.append(imgbox,itembox,option);
             document.getElementById("left").append(left);
-            
-            discount=elem.Price-elem.MRP;
+                        
+             discount=elem.Price-elem.MRP;
              sum2+=parseInt(discount) ;
              document.getElementById("disc_MRP").textContent="Rs "+sum2;
              document.getElementById("total_saving").textContent="Rs "+(-sum2);
@@ -442,6 +460,7 @@ console.log(cartdata);
         cartdata.splice(i,1)
         localStorage.setItem("cart",JSON.stringify(cartdata));
         displayCart(cartdata);
+        // updateCount(cartdata);
         // updateCount(cartdata);
         cartdata.map(function(elem,i){
             sum -= parseInt(elem.Price) ;
