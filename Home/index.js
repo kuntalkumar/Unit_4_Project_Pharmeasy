@@ -61,6 +61,27 @@ var adBM=JSON.parse(localStorage.getItem("userName"));
 function user(){
 
 document.getElementById("login").innerText=adBM; 
-console.log(adBM);
+// console.log(adBM);
 
+}
+
+
+
+
+document.getElementById("button").addEventListener("click",searchP);
+function searchP(input){
+  var input=document.getElementById("inputP").value;
+
+  console.log(input);
+  localStorage.setItem("serachProduct",input);
+  if(input==="dettol"){
+    window.location.href = "dettol.html"
+
+
+  }
+  else
+  {
+    alert("Plese enter item name");
+
+  }
 }
