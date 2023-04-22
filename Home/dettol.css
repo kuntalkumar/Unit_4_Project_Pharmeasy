@@ -1,0 +1,39 @@
+
+#productImage{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+
+gap: 100px;
+
+margin-left: 50px;
+
+}
+#mainImage img{
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    width: 30%;
+    padding:20px 100px 20px 100px;
+}
+
+#pAngle{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    }
+    #pAngle img{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                width: 60%;
+    }
+
+#parent{
+    display: flex;
+    margin-top: 100px;
+
+
+}
+#productDetails{
+    margin-left: 30px;
+}
+#productSetails img{
+    width: 10px;
+}

@@ -104,44 +104,63 @@
   
   
   /* ******************************************************** style for search product************************************************************************************** */
-    
+
+
   #search{
-    margin-top: 50px;
-    margin-bottom: 40px;
-    padding-left: 16%;
-    padding-right: 16%;
+    /* background-color: rgb(235, 239, 239); */
+    margin-top: 10px;
+    /* margin-right: 16%; */
+  
+    margin-left: 30%; 
+    /* margin-bottom: 10px; */
+/* display: grid; */
+width: 120%;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-left: 10px;
+    margin-bottom: 30px;
+  
   }
+
   #search h2{
     margin-bottom: 30px;
-    text-align: left;
+    text-align: center;
     display:flex ;
   }
   
-  #search #button{
+  #search_input #button{
     background-color:#10847e;
     border: none;
-      /* border-color: black; */
       border-radius: 20px;
       color: white;
-      width:10%;
-      height:40px;
+      width:18%;
+      margin-bottom: 2px;
+      margin-right: 2px;
+      margin-top: 2px;
   }
-  #search #button:hover{
+  #search_input #button:hover{
     background-color:#043c39;
   
   }
-  #search input{
-    margin: -7px;
+  #search_input{
+    /* margin: -1px; */
     margin-right: 5px;
     height:40px;
-    width:88%;
+    width:40%;
     border: 1px solid silver;
     background-color: white;
     border-radius: 30px;
-  
+  display: flex;
+  justify-content: space-between;
+
   }
-  
-  
+#inputP{
+    margin-left: 20px;
+width: 100%;
+    padding-left: 50px;
+    border: none;
+}
+    
   /* ***************************************************style for service************************************************************* */
   
   
@@ -291,14 +310,15 @@
 
 
       #search_input{
-display: flex;
-flex-direction: column;
+/* display: flex;
+flex-direction: column; */
 
 gap: 10px;
     } 
     #search #button     {
         width:100px;
-        height:40px;
+        height:100%;
+        margin-top: 0px;
        
     }
   #services{
@@ -376,8 +396,8 @@ gap: 10px;
 
     }*/
     #search_input{
-          display: flex;
-          flex-direction: column;
+          /* display: flex;
+          flex-direction: column; */
 
           gap: 10px;
     } 
@@ -385,6 +405,9 @@ gap: 10px;
         width:100px;
         height:40px;
        
+    }
+    #inputP{
+      padding-left: 5px;
     }
 
 
