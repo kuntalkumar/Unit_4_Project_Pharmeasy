@@ -130,7 +130,7 @@ button{
                     </div>
 
                     <div class="form-link">
-                        <span>Already have an account? <a href="index.html" class="signup-link">Login</a></span>
+                        <span>Already have an account? <a href="login.html" class="signup-link">Login</a></span>
                     </div>
                 </form>
             </div>
@@ -179,6 +179,7 @@ function Shiva2(){
             arr.push(obj) ;
             localStorage.setItem("customers",JSON.stringify(arr)) ;
             alert("Account Succesful Created") ;
+            window.location.href = "login.html";
         }
         else if ( obj.email == "" && obj.pass1 == "" && obj.pass2 == ""){
             alert("Create Account") ;

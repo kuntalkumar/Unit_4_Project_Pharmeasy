@@ -173,7 +173,7 @@ function Shiva2(customers){
     else{
         arr.map(function(ele,i){
             if( obj.email === ele.email && obj.pass === ele.pass1 ){
-                alert("Account Created") ;
+                alert("Redirect to home page") ;
                 Shiva3() ;
                 count++ ;
                 return ;
@@ -185,7 +185,7 @@ function Shiva2(customers){
     }
 }
 function Shiva3(){
-    document.querySelector("body").style.background = "green" ;
+    window.location.href = "dashboard.html";
 }
 
 </script>
