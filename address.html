@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address</title>
+</head>
+<style>
+    h2{
+        text-align: center;
+    }
+    #input>div,button{
+        text-align: center;
+    }
+    #input{
+        display: flex;
+        flex-direction: column;
+        width:100%
+    }
+    #input>input {
+        justify-content: center;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height:50px;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        padding: 5px;
+        width: 40%;
+    }
+    body{
+        text-align: center;
+    }
+    #save{
+        width:40%;
+        height:50px;
+        border-radius: 10px;
+        margin-top: 10px;
+        background-color: lightgray;
+    }
+    #h,#w,#o{
+        width:5%;
+        height:30px;
+        border-radius: 10px;
+        border-color:black;
+        color: black
+    }
+</style>
+<body>
+   <h2>Add Address</h2>
+   <div id="input">
+   <input id="delivered" placeholder="delivered to *">
+   <input id="Mobile"placeholder="Mobile Number">
+   <input id="Pincode"placeholder="Pincode">
+   <input id="House"placeholder="House Number and building">
+   <input id="Street"placeholder="Street Name">
+   </div>
+   <p>Address type</p>
+   <button id="h">Home</button><button id="w">Work</button><button id="o">Others</button>
+   <div>
+   <button onclick="submit()" id="save">Save and continue</button>
+   </div>
+</body>
+</html>
+<script>
+    var arr=JSON.parse(localStorage.getItem("address"))||[];
+    function submit(){
+    arr.push(document.getElementById("delivered").value,document.getElementById("Mobile").value,document.getElementById("Pincode").value,
+    document.getElementById("House").value,document.getElementById("Street").value);
+    localStorage.setItem("address",JSON.stringify(arr));
+    }
+    console.log(arr);
+</script>
