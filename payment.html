@@ -278,7 +278,7 @@
                         <span>CVV :</span>
                         <input
                            type="text"
-                           placeholder="1234"
+                           placeholder="000"
                            name="cvv"
                            onchange="handleChange(this.value,this.name)"
                         />
@@ -287,7 +287,7 @@
                </div>
             </div>
 
-            <input type="submit" value="proceed to checkout" class="submit-btn" id="id-submit" />
+            <input type="submit" value="proceed to checkout  ₹ " class="submit-btn" id="id-submit" />
          </form>
       </div>
    </body>
@@ -357,7 +357,7 @@
          alert("Expire Month is required..!");
       } else if (!expYear) {
          alert("Enter atleat 3 characters..!");
-      } else if (!cvv) {
+      } else if (cvv !=123) {
          alert("Cvv is required..!");
       }
       else{
@@ -365,4 +365,8 @@
         window.location.href = "Paymentsuccuss.html"
       }
    }
+var price=JSON.pase(localStorage.getItem("amount"));
+document.getElementById("id-submit").value+= amount;
+
+
 </script>
