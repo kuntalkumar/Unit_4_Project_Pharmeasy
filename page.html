@@ -6,131 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<style>
-        #upper {
-            display: flex;
-            width:60%;
-            border: 1px solid gray;
-        }
-        #last{
-            text-align: right;
-            margin-left: 450px;
-            justify-content: center;
-        }
-       #parent {
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        width:60%;
-        border: 1px solid gray;
-        padding: auto;
-       }
-       img{
-            align-items: center;
-            width:50%;
-            padding:20px;
-            margin-right: 100px;
-        }
-        #details > p,h3{
-            width:200%;
-            margin-top: -10px;
-            margin-left: -50px;
-            justify-content: center;
-        }
-        #parent > div>  h3:first-child{
-            padding-top:20px;
-        }
-        #option{
-            display: block;
-            justify-content: end;
-            margin-left: 200px;
-            padding: 20px;
-        }
-        button{
-           margin-bottom: 50px; 
-        }
-        #option > h4{
-            border: 1px solid gray;
-            padding: 10px;
-            padding-right: 20px;
-            border-radius: 10px;
-            width:30px;
-        }
-        #fullpage{
-            display: flex;
-            gap:20px;
-        }
-        #right{
-            width:80%
-        }
-</style>
 <body>
-    <div id="fullpage">
-    <div id="parent">
-    <div id="upper">
-          <div><h2>3 Items present in Cart</h2></div>
-          <div><h4 id="last"> Saved for later</h4></div>
-    </div>
-    <div id="left">
-          <div>
-            <img src="https://cdn01.pharmeasy.in/dam/products_otc/D23285/be-one-shilajit-ashwagandha-shatavari-100-ayurvedic-bottle-of-30-capsules-2-1672728411.jpg?dim=700x0&dpr=1&q=100" alt="">
-          </div>
-          <div id="details">
-            <h3>Be One Shilajit Ashwagandha Shatavari 100% Ayurvedic Bottle Of 30 Capsules</h3>
-            <p>By DOCTOR MOREPEN</p>
-            <P>50 Glucometer Test Strips(s) in Box</P>
-            <h3>MRP Rs 2499* <span>Rs1599</span></h3>
-            <p>Delivery by Today 5.00pm to 10.00pm</p>
-          </div>
-          <div id="option">
-                 <button>Delete</button>
-                 <h4>Qty</h4>
-          </div>
-    </div>
-    <div id="right">
-        <div id="upperright">
-          <h3>Cart Total</h3>
-        </div>
-        <div>
-          <h3>Apply Coupon</h3>
-          <button>Add Delivery Address</button>
-        </div>
-        <div>
-        <h3>Bill Summary</h3>
-        <p>Total MRP</p>
-        <p>Discount on MRP</p>
-        <p>Cart Value</p>
-        <p>Delivery charges</p>
-        <button>Login</button>
-        <h3>Amount to be paid</h3>
-        </div>
-        <div>
-            <h3>Total Saving</h3>
-        </div>
-    </div>
-    </div>
-    <form name="myform">
-        <label></label>
-        <select name="Qty" onchange="" id="qty">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-            <option>9</option>
-            <option>10</option>
-            <option>11</option>
-            <option>12</option>
-            <option>13</option>
-            <option>14</option>
-            <option>15</option>
-            <option>16</option>
-            <option>17</option>
-            <option>18</option>
-            <option>19</option>
-            <option>20</option>
-        </select>
+    <div id="parent"></div>
 </body>
 </html>
+<script>
+    var mi = document.createElement("input");
+    mi.setAttribute('type', 'number');
+    var arr=[];
+    arr.push(mi.value);
+    console.log(arr);
+    document.getElementById("parent").append(mi);
+    localStorage.setItem("Qty",arr)
+</script>

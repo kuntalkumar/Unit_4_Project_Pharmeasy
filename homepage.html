@@ -42,11 +42,11 @@
       image_url:
         "https://cdn01.pharmeasy.in/dam/products_otc/D23285/be-one-shilajit-ashwagandha-shatavari-100-ayurvedic-bottle-of-30-capsules-2-1672728411.jpg?dim=700x0&dpr=1&q=100",
       name: "Be One Shilajit Ashwagandha Shatavari 100% Ayurvedic Bottle Of 30 Capsules",
-      owner:"By DOCTOR MOREPEN",
-      desc:"50 Glucometer Test Strips(s) in Box",
-      MRP:"2499",
-      Price:"1599",
-      Delivery:"Delivery by Today 5.00pm to 10.00pm"
+      // owner:"By DOCTOR MOREPEN",
+      // desc:"50 Glucometer Test Strips(s) in Box",
+      strikedoffprice:"2499",
+      price:"1599",
+      // Delivery:"Delivery by Today 5.00pm to 10.00pm"
     }
     ];
     // var right=[
@@ -77,22 +77,22 @@
         var name=document.createElement("h3");
         name.textContent=elem.name;
 
-        var owner=document.createElement("p");
-        owner.textContent=elem.owner;
+        // var owner=document.createElement("p");
+        // owner.textContent=elem.owner;
 
-        var desc=document.createElement("p");
-        desc.textContent=elem.desc
+        // var desc=document.createElement("p");
+        // desc.textContent=elem.desc
 
-        var MRP=document.createElement("h3");
-        MRP.textContent="MRP Rs"+elem.MRP;
+        var strikedoffprice=document.createElement("h3");
+        strikedoffprice.textContent="MRP Rs"+elem.strikedoffprice;
 
-        var Price=document.createElement("h3");
-        Price.textContent="Rs"+elem.Price;
+        var price=document.createElement("h3");
+        price.textContent="Rs"+elem.price;
 
-        var Delivery=document.createElement("p");
-        Delivery.textContent=elem.Delivery;
+        // var Delivery=document.createElement("p");
+        // Delivery.textContent=elem.Delivery;
 
-        itembox.append(name,owner,desc,MRP,Price,Delivery);
+        itembox.append(name,strikedoffprice,price,);
         imgbox.append(image);
 
         var button=document.createElement("button");
@@ -106,11 +106,11 @@
     })
  }
  
-    var array = JSON.parse(localStorage.getItem("cart"))||[];
+    var array = JSON.parse(localStorage.getItem("cartItems"))||[];
            function cart(elem){
             console.log(elem);
             array.push(elem);
-            localStorage.setItem("cart",JSON.stringify(array));
+            localStorage.setItem("cartItems",JSON.stringify(array));
            }
     // var array1 = JSON.parse(localStorage.getItem("Buy"))||[];
     //        function buy(elem){
