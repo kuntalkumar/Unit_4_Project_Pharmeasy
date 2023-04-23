@@ -433,7 +433,14 @@ gap: 10px;
 
 }
 #payment_partners{
-  flex-direction: column;
+  /* flex-direction: column; */
+display: grid;
+grid-template-columns: repeat(4,1fr);
+}
+#payment{
+    margin-top: 50px;
+
+
 }
 }
 

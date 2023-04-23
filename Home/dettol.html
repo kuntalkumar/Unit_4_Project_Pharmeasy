@@ -239,8 +239,47 @@ width: 100%;
       grid-template-columns: repeat(2,1fr);
 
 }
+#parent{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+#productImage{
+  margin-top: 100px;
+}
+
+#viewcart button{
+
+width: 70%;
+
+}
+#addToCart{
+margin-left: 15%;
+
+width: 70%;
+
+}
+#pAngle{
+  gap: 20px;
+
+}
+#pAngle img{
+  width: 100%;
+  height:50px;
+  margin-left: 15px;
+  margin-right: 15px;
+
+  /* border: 1px solid silver; */
+
+}
+#bottom{
+      grid-template-columns: repeat(2,1fr);
+
+}
+
 
 } 
+
+
 
 @media only screen and (max-width: 500px) {
 
@@ -333,6 +372,51 @@ margin-left: -50px;
 #payment_partners{
   flex-direction: column;
 }
+#parent{
+  flex-direction: column;
+}
+#productDetails{
+  padding-left: 80px;
+
+}
+#viewcart button{
+
+  width: 70%;
+
+}
+#addToCart{
+  margin-left: 15%;
+
+  width: 70%;
+
+}
+#pAngle{
+  gap: 20px;
+
+}
+#pAngle img{
+  width: 100%;
+  height:50px;
+  margin-left: 15px;
+  margin-right: 15px;
+
+  /* border: 1px solid silver; */
+
+}
+#bottom{
+      grid-template-columns: repeat(1,1fr);
+
+}
+#payment_partners{
+  /* flex-direction: column; */
+display: grid;
+grid-template-columns: repeat(4,1fr);
+}
+#payment{
+    margin-top: 50px;
+
+
+}
 }
 
 
@@ -380,7 +464,7 @@ margin-left: -50px;
 
               
               <div> <i class="fa-regular fa-user"></i></div>
-             <div><button id="login"></button></div>
+             <div><button id="login"></button> </div>
 
             </div></a>
             <div class="rhalign">
@@ -442,25 +526,163 @@ margin-left: -50px;
     <div id="leftside">
       <h2>Dettol Antiseptic Disinfectant Liquid , 60ml</h2>
       <p>Visit DETTOL Store</p>
-   <div>  
+   <div id="ratings">  
      <img src="https://community.powerbi.com/t5/image/serverpage/image-id/145064i2749B322A77AD36C/image-dimensions/433x143?v=v2" alt="">
-      <p></p>
+      <p>(380 ratings)</p>
     </div>
-    <h2>M.R.P ₹<span></span></h2>
+    <h2>M.R.P ₹<span id="price"></span></h2>
     <p></p>
 
-    <p>Delivery by <h4>28 Apr-29 Apr</h4></p>
+    <div id="deliverBy"><p>Delivery by</p> <h4>28 Apr-29 Apr</h4></div>
+    
 
     </div>
+    <h3>Select available variant</h3>
+    <h5>Pack Size</h5>
+    <div id="packsize">
+
+    <p id="60ml">60 ml</p>
+    <p id="125ml">125 ml</p>
+    <p id="250ml">250ml</p>
+    <p id="550ml">550 ml</p>
+    <p id="1000ml">1000 ml</p>
+    </div>
+  </div>
+
     <div id="rightside">
-      <button id="addToCart">Add To Cart</button>
+      <button id="addToCart"><h3>Add To Cart</h3></button>
 
-    </div>
+  </div>
+  <div id="viewcart">
+    <p>Please add item(s) to proceed</p>
+    <button>  <h3>View cart > </h3></button>
   </div>
 </div>
 
+<!-- *********************bottom section**************************************************** -->
 
 
+
+
+<div id="bottomSection"> 
+  <div id="bottom">
+   <div>
+  <h3>Company</h3>
+  <p>About Us
+  </p>
+  <p>Careers</p>
+  <p>Blog
+  </p>
+  <p>Partner with PharmEasy</p>
+  <p>Sell at PharmEasy
+  </p>
+  <br />
+  <h3>Our Services
+  </h3>
+  <p>Order Medicine
+  </p>
+  <p>Healthcare Products
+  </p>
+  <p>Lab Tests
+  </p>
+  <p>Find Nearest Collection Centre</p>
+   </div>
+  
+   <div>
+    <h3>Featured Categories</h3>
+    <p>Most Loved Brands
+    </p>
+    <p>Mega Clearance Sale
+    </p>
+    <p>Personal Care
+    </p>
+    <p>Healthcare Devices
+    </p>
+    <p>Health Food and Drinks
+    </p>
+    <p>Home Care
+    </p>
+    <p>Mother and Baby Care
+    </p>
+    <p>Diabetic Care
+    </p>
+    <p>Fitness Supplements
+    </p>
+    <p>Skin Care
+    </p>
+    <p>Sexual Wellness
+    </p>
+    <p>Accessories & Wearables
+    </p>
+    <p>Health Condition
+    </p>
+    <p>Ayurvedic Care
+    </p>
+    <p>Elderly Care
+    </p>
+    <p>Top Products</p>
+  
+   </div>
+   <div>
+    <h3>Need Help</h3>
+    <p>Browse All Medicines
+    </p>
+    <p>Browse All Molecules
+    </p>
+    <p>Browse All Cities
+    </p>
+    <p>Browse All Areas
+    </p>
+    <p>Browse All Stores
+    </p>
+    <p>FAQs
+    </p>
+    <p>Policy Info
+    </p>
+    <p>Editorial Policy
+    </p>
+    <p>Privacy Policy
+    </p>
+    <p>Vulnerability Disclosure Policy
+    </p>
+    <p>Terms and Conditions
+    </p>
+    <p>Customer Support Policy
+    </p>
+    <p>Return Policy</p>
+  
+   </div>
+   <div>
+    <h3>Follow us on</h3>
+    <div id="social_media">
+  
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-youtube"></i>
+      <i class="fa-brands fa-twitter"></i>
+    </div>
+   </div>
+  </div>
+  
+  <div>
+    <h3>Our Payment Partners</h3>
+    <div id="payment_partners">
+      <img src="https://assets.pharmeasy.in/apothecary/images/gpay.png?dim=1440x0">
+      <img src="https://assets.pharmeasy.in/apothecary/images/paytm.png?dim=1440x0" alt="">
+      <img src="https://assets.pharmeasy.in/apothecary/images/phonepe.png?dim=1440x0" alt="">
+      <img src="https://assets.pharmeasy.in/apothecary/images/amazon.png?dim=1440x0" alt="">
+      <img src="https://assets.pharmeasy.in/apothecary/images/mobikwik.png?dim=1440x0" alt="">
+      <img src="https://assets.pharmeasy.in/apothecary/images/olamoney.png?dim=1440x0" alt="">
+      <img src="https://assets.pharmeasy.in/apothecary/images/maestro.png?dim=1440x0" alt="">
+      <img src="https://assets.pharmeasy.in/apothecary/images/mastercard.png?dim=1440x0" alt="">
+      <img src="https://assets.pharmeasy.in/apothecary/images/visa.png?dim=1440x0" alt="">
+      <img src="https://assets.pharmeasy.in/apothecary/images/rupay.png?dim=1440x0" alt="">
+    </div>
+  </div>
+  </div>
+    
+  
+  
 
 
 
@@ -539,6 +761,41 @@ function searchP(input){
    alert("Plese enter item name");
 
  }
+}
+
+document.getElementById("price").textContent="36.59";
+ document.getElementById("60ml").addEventListener("click",xtrasmall);
+
+document.getElementById("125ml").addEventListener("click", small);
+
+ document.getElementById("250ml").addEventListener("click",medium);
+
+document.getElementById("550ml").addEventListener("click",large)
+
+document.getElementById("1000ml").addEventListener("click",xtraLarge)
+
+function xtrasmall(){
+  document.getElementById("price").textContent="36.59";
+
+
+}
+function small(){
+  document.getElementById("price").textContent="73.2";
+
+
+}function medium(){
+  document.getElementById("price").textContent="127.77";
+
+
+}function large(){
+  document.getElementById("price").textContent="214.06";
+
+
+}
+function xtraLarge(){
+  document.getElementById("price").textContent="336.5";
+
+
 }
 
 </script>
