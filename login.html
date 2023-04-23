@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+img{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.form{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background-color: #10847e;
+    border-radius: 6px;
+    max-width: 500px;
+    width: 100%;
+}
+header{
+    position: relative;
+    font-size: 500%;
+    font-weight: 600;
+    text-align: center;
+    margin: 20px 0 -40px 0 ;
+}
+form{
+    margin-top: 30px;
+    padding: 30px;
+}
+form .field{
+    position: relative;
+    height: 45px;
+    width: 100%;
+    margin-top: 20px;
+}
+.field input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    border: 1px solid #CACACA;
+    padding: 0 15px;
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+}
+.field button{
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+.form-link{
+    text-align: center;
+    margin-top: 10px;
+    
+}
+.form-link span,
+.form-link a {
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: #10847e;
+    font-weight: 400;
+}
+a:hover{
+    text-decoration: underline;
+}
+.eye-icon{
+    font-size: 18px;
+    color: #8b8b8b;
+    position: absolute;
+    top: 30%;
+    right: 10px;
+    cursor: pointer;
+}
+button{
+    cursor: pointer;
+    color: black;
+}
+/* .line{
+    position: relative;
+    height: 1px;
+    width: 90%;
+    background-color: black;
+    margin: auto;
+    margin-bottom: 50px;
+} */
+    </style>
+</head>
+<body>
+    <section class="container forms">
+        <div class="form login">
+            <div class="form-content">
+                <header>Login</header>
+
+                <form action="#">
+                    <div class="field input-field">
+                        <input type="email"class="input" placeholder="Enter Your Email" id="email">
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="password"class="input" id="pass" placeholder="Enter Your password" >
+                        <i class='bx bx-hide eye-icon' id="eye" ></i>
+                    </div>
+
+                    <div class="form-link">
+                        <a href="forget.html" class="forgot-pass">Forgot password?</a>
+                    </div>
+                    <div class="field button-field">
+                        <button type="submit">Login</button>
+                    </div>
+
+                    <div class="form-link">
+                        <span>Already have an account? <a href="signup.html" class="signup-link">Sign up</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+<script>
+    document.querySelector("i").addEventListener("click",Shiva) ;
+function Shiva(){
+    var z = document.getElementById("pass").type ;
+    if ( z === "password"){
+        document.getElementById("pass").type = "text" ;
+        document.querySelector("i").classList = "bx bx-show eye-icon" ;
+    }
+    else{
+        document.getElementById("pass").type = "password" ;
+        document.querySelector("i").classList = "bx bx-hide eye-icon" ;
+    }
+}
+
+document.querySelector("form").addEventListener("submit",Shiva2) ;
+var arr = JSON.parse(localStorage.getItem("customers")) || [] ;
+function Shiva2(customers){
+    event.preventDefault() ;
+    var obj = {
+         email : document.getElementById("email").value ,
+         pass : document.getElementById("pass").value ,
+    }
+    var count = 0 ;
+    if (obj.email === "" || obj.pass === "" || obj.email === "" && obj.pass === "" ){
+        alert("Enter Valid Data") ;
+    }
+    else{
+        arr.map(function(ele,i){
+            if( obj.email === ele.email && obj.pass === ele.pass1 ){
+                alert("Redirect to home page") ;
+                Shiva3() ;
+                count++ ;
+                return ;
+            }
+        })
+    }
+    if ( count == 0 ){
+        alert("Please !Sign-up") ;
+    }
+}
+function Shiva3(){
+    window.location.href = "dashboard.html";
+}
+
+</script>
