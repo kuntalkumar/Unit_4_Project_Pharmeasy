@@ -9,6 +9,9 @@
   <!-- <link rel="stylesheet" href="index.css" /> -->
 <style>
 
+#img{
+        cursor: pointer;
+      }
 
 #rheading{
     display: flex;
@@ -53,11 +56,12 @@
     padding-right: 15px;
     padding-left: 15px;
     padding-bottom: 10px;
+    cursor: pointer;
   
   }
   #Download button{
     background-color: none;
-  
+    cursor: pointer;
   border: none  ;
   }
   #Download:hover{
@@ -70,30 +74,37 @@
   
   }
   #login{
+    /* margin-bottom: -20px; */
     border: none;
     background-color: white;
+    cursor: pointer;
   }
   #off{
      border: none;
     background-color: white;
+    cursor: pointer;
 
   }
   #cart{
     border: none;
     background-color: white;
+    cursor: pointer;
 
 
   }
   #deliver{
     margin-top: -10px;
     margin-bottom: -35px;
+    cursor: pointer;
   }
  
   #EnterAddress{
     margin-top: -10px;
     padding-left: 10px;
     /* margin-bottom: 50px; */
-    color:rgb(36, 36, 62)
+    color:rgb(36, 36, 62);
+    cursor: pointer;
+
   }
   
       /* ****************************************Style for nav*************************************************************************** */
@@ -107,11 +118,13 @@
         justify-content: center;
         margin-top: -2px;
         margin-bottom: -2px;
+
   
       }
       #nav button{
         background-color: white;
         border: none;
+        cursor: pointer;
       }
   
   
@@ -149,6 +162,7 @@ width: 120%;
       margin-bottom: 2px;
       margin-right: 2px;
       margin-top: 2px;
+      cursor: pointer;
   }
   #search_input #button:hover{
     background-color:#043c39;
@@ -184,9 +198,12 @@ width: 100%;
         padding-right: 16%;
         text-align: center;
         gap: 10px;
+
       }
       #services>div img{
         width: 120px;
+        cursor: pointer;
+
       }
       #services>div:hover{
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -399,7 +416,6 @@ gap: 10px;
     }
 
 
-
     /* #search{
 
     } */
@@ -493,7 +509,7 @@ grid-template-columns: repeat(4,1fr);
 
                   
                   <div> <i class="fa-regular fa-user"></i></div>
-                 <div><button id="login"></button></div>
+                 <div><button id="login" ></button></div>
 
                 </div></a>
                 <div class="rhalign">
@@ -856,18 +872,18 @@ document.getElementById("EnterAddress").textContent= kk;
 
 // function findUser(){
 
-//  var userName="kuntal"
-var adBM=JSON.parse(localStorage.getItem("userName"))||"User";
+// //  var userName="kuntal"
+// var adBM=JSON.parse(localStorage.getItem("userName"));
 
-// } 
-user();
+// // } 
+// user();
 
-function user(){
+// function user(){
 
-document.getElementById("login").innerText=adBM; 
-// console.log(adBM);
+// .innerText=adBM; 
+// // console.log(adBM);
 
-}
+// }
 
 
 
@@ -891,6 +907,19 @@ function searchP(input){
 
  }
 }
+
+var arr=JSON.parse(localStorage.getItem("customers"));
+ customesdetails(arr);
+var cxemail="";
+ function customesdetails(arr){
+  arr.map(function(ele,i){
+    cxemail=ele.email;
+    document.getElementById("login").innerText=cxemail;
+    console.log(cxemail)
+    localStorage.setItem("userName",JSON.stringify(cxemail))
+  })
+ }
+
 
 
 </script>

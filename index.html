@@ -851,24 +851,24 @@ document.getElementById("cart").addEventListener("click",mycart);
 function mycart(){
   alert("Login first ")
 }
-var arr=JSON.parse(localStorage.getItem("customers"))||[];
- customesdetails(arr);
-var cxemail="";
- function customesdetails(arr){
-  arr.map(function(ele,i){
-    cxemail=ele.email;
-    console.log(cxemail)
-  })
- }
+// var arr=JSON.parse(localStorage.getItem("customers"));
+//  customesdetails(arr);
+// var cxemail="";
+//  function customesdetails(arr){
+//   arr.map(function(ele,i){
+//     cxemail=ele.email;
+//     console.log(cxemail)
+//   })
+//  }
 
 
-document.getElementById("login").addEventListener("click", findUser);
+// document.getElementById("login").addEventListener("click", findUser);
+// findUser()
+//      function findUser(){
 
-     function findUser(){
+//       localStorage.setItem("userName",JSON.stringify(cxemail));
 
-      localStorage.setItem("userName",JSON.stringify(cxemail));
-
-     }
+//      }
 
 
 

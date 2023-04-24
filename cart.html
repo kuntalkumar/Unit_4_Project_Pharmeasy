@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart Page</title>
     <style>
+
+      
+  #img{
+        cursor: pointer;
+      }
         #parent{
             display: flex;
             gap:20px;
@@ -156,7 +161,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: -20px;
+            /* margin-top: -20px; */
+            cursor: pointer;
         }
         #right div:nth-child(3){
             padding:30px;
@@ -1195,5 +1201,10 @@ console.log(cartdata);
       if(localStorage.getItem("amount")>0){
         window.location.href = "payment.html";
       }
+      
     }
+
+
+
+
 </script>
