@@ -33,6 +33,7 @@
     #left a img{
     margin-top: 14px;
     width: 150px;
+   padding-right: 20px;
     }
     #left div{
     height: 80%;
@@ -150,6 +151,9 @@ button{
   text-align: center;
   padding: 10px;
   border-radius: 10px;
+}
+#mycart{
+  padding-top: 18px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -382,7 +386,7 @@ button{
                 </div>
                 <a href="cart.html">
                     <i class="fa-solid fa-cart-shopping"></i>
-                    <p>Cart</p>
+                    <p id="mycart">Cart</p>
                 </a>
             </div>
         </nav>
@@ -433,172 +437,172 @@ var mensData = [
           "data:image/jpeg;base64,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",
         name: "Dettol Antiseptic Disinfectant Liquid, 125ml",
         price: "73.2",
-        strikedoffprice: "₹78.98",
+        strikedoffprice: "78.98",
       },
     {
       image_url:
           "https://cdn01.pharmeasy.in/dam/products_otc/S04683/evion-400mg-strip-of-20-capsule-2-1678787718.jpg?dim=700x0&dpr=1&q=100",
         name: "Evion 400mg Strip Of 20 Capsule",
         price: "78.19",
-        strikedoffprice: "₹78.98",
+        strikedoffprice: "78.98",
       },
       {
         image_url:
           "https://cdn01.pharmeasy.in/dam/products_otc/071710/evion-400mg-strip-of-10-capsules-2-1671741393.jpg?dim=700x0&dpr=1&q=100",
         name: "Evion 400mg Strip Of 10 Capsules ",
         price: "35.54",
-        strikedoffprice: "₹35.9",
+        strikedoffprice: "35.9",
       },
       {
         image_url:
           "https://cdn01.pharmeasy.in/dam/products_otc/071715/evion-600mg-strip-of-10-capsules-1-1671741257.jpg",
         name: " Evion 600mg Strip Of 10 Capsules",
         price: "51.18",
-        strikedoffprice: "₹51.7",
+        strikedoffprice: "51.7",
       },
       {
         image_url:
         "https://cdn01.pharmeasy.in/dam/products_otc/I13917/calcimax-p-strip-of-15-tablets-2-1669710266.jpg?dim=700x0&dpr=1&q=100",
         name: "Calcimax P Strip Of 15 Tablets",
         price: "174.24",
-        strikedoffprice: "₹274.24",
+        strikedoffprice: "274.24",
       },{
         image_url:
           "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg",
         name: "Jointace C2 Strip Of 10 Tablets",
         price: "283.8",
-        strikedoffprice: "₹330",
+        strikedoffprice: "330",
       },
       {
         image_url:
           "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg?dim=700x0&dpr=1&q=100 ",
         name: " Jointace C2 Strip Of 10 Tablets ",
         price: "283.8",
-        strikedoffprice: "₹330",
+        strikedoffprice: "330",
       },
       {
         image_url:
           "https://cdn01.pharmeasy.in/dam/products_otc/I12335/calcimax-d-1000mg-strip-of-30-tablets-2-1669710215.jpg?dim=700x0&dpr=1&q=100",
         name: " Extrammune Strip Of 30 Tablets ",
         price: "106.2",
-        strikedoffprice: "₹118",
+        strikedoffprice: "118",
       },
       {
         image_url:
           "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg?dim=700x0&dpr=1&q=100 ",
         name: "MEN'S REEBOK TRAINING  POLO T-SHIRTS TEE  ",
         price: "283.8",
-        strikedoffprice: "₹330",
+        strikedoffprice: "330",
       },
     {
       image_url:
           "https://cdn01.pharmeasy.in/dam/products_otc/S04683/evion-400mg-strip-of-20-capsule-2-1678787718.jpg?dim=700x0&dpr=1&q=100",
         name: "Evion 400mg Strip Of 20 Capsule",
         price: "78.19",
-        strikedoffprice: "₹78.98",
+        strikedoffprice: "78.98",
       },
       {
         image_url:
           "https://cdn01.pharmeasy.in/dam/products_otc/071710/evion-400mg-strip-of-10-capsules-2-1671741393.jpg?dim=700x0&dpr=1&q=100",
         name: "Evion 400mg Strip Of 10 Capsules ",
         price: "35.54",
-        strikedoffprice: "₹35.9",
+        strikedoffprice: "35.9",
       },
       {
         image_url:
           "https://cdn01.pharmeasy.in/dam/products_otc/071715/evion-600mg-strip-of-10-capsules-1-1671741257.jpg",
         name: " Evion 600mg Strip Of 10 Capsules",
         price: "51.18",
-        strikedoffprice: "₹51.7",
+        strikedoffprice: "51.7",
       },
       {
         image_url:
         "https://cdn01.pharmeasy.in/dam/products_otc/I13917/calcimax-p-strip-of-15-tablets-2-1669710266.jpg?dim=700x0&dpr=1&q=100",
         name: "Calcimax P Strip Of 15 Tablets",
         price: "174.24",
-        strikedoffprice: "₹274.24",
+        strikedoffprice: "274.24",
       },{
         image_url:
           "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg",
         name: "Jointace C2 Strip Of 10 Tablets",
         price: "283.8",
-        strikedoffprice: "₹330",
+        strikedoffprice: "330",
       },
       {
         image_url:
           "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg?dim=700x0&dpr=1&q=100 ",
         name: " Jointace C2 Strip Of 10 Tablets ",
         price: "283.8",
-        strikedoffprice: "₹330",
+        strikedoffprice: "330",
       },
       {
         image_url:
           "https://cdn01.pharmeasy.in/dam/products_otc/I12335/calcimax-d-1000mg-strip-of-30-tablets-2-1669710215.jpg?dim=700x0&dpr=1&q=100",
         name: " Extrammune Strip Of 30 Tablets ",
         price: "106.2",
-        strikedoffprice: "₹118",
+        strikedoffprice: "118",
       },
       {
         image_url:
           "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg?dim=700x0&dpr=1&q=100 ",
         name: "MEN'S REEBOK TRAINING  POLO T-SHIRTS TEE  ",
         price: "283.8",
-        strikedoffprice: "₹330",
+        strikedoffprice: "330",
       },
     {
       image_url:
           "https://cdn01.pharmeasy.in/dam/products_otc/S04683/evion-400mg-strip-of-20-capsule-2-1678787718.jpg?dim=700x0&dpr=1&q=100",
         name: "Evion 400mg Strip Of 20 Capsule",
         price: "78.19",
-        strikedoffprice: "₹78.98",
+        strikedoffprice: "78.98",
       },
       {
         image_url:
           "https://cdn01.pharmeasy.in/dam/products_otc/071710/evion-400mg-strip-of-10-capsules-2-1671741393.jpg?dim=700x0&dpr=1&q=100",
         name: "Evion 400mg Strip Of 10 Capsules ",
         price: "35.54",
-        strikedoffprice: "₹35.9",
+        strikedoffprice: "35.9",
       },
       {
         image_url:
           "https://cdn01.pharmeasy.in/dam/products_otc/071715/evion-600mg-strip-of-10-capsules-1-1671741257.jpg",
         name: " Evion 600mg Strip Of 10 Capsules",
         price: "51.18",
-        strikedoffprice: "₹51.7",
+        strikedoffprice: "51.7",
       },
       {
         image_url:
         "https://cdn01.pharmeasy.in/dam/products_otc/I13917/calcimax-p-strip-of-15-tablets-2-1669710266.jpg?dim=700x0&dpr=1&q=100",
         name: "Calcimax P Strip Of 15 Tablets",
         price: "174.24",
-        strikedoffprice: "₹274.24",
+        strikedoffprice: "274.24",
       },{
         image_url:
           "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg",
         name: "Jointace C2 Strip Of 10 Tablets",
         price: "283.8",
-        strikedoffprice: "₹330",
+        strikedoffprice: "330",
       },
       {
         image_url:
           "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg?dim=700x0&dpr=1&q=100 ",
         name: " Jointace C2 Strip Of 10 Tablets ",
         price: "283.8",
-        strikedoffprice: "₹330",
+        strikedoffprice: "330",
       },
       {
         image_url:
           "https://cdn01.pharmeasy.in/dam/products_otc/I12335/calcimax-d-1000mg-strip-of-30-tablets-2-1669710215.jpg?dim=700x0&dpr=1&q=100",
         name: " Extrammune Strip Of 30 Tablets ",
         price: "106.2",
-        strikedoffprice: "₹118",
+        strikedoffprice: "118",
       },
       {
         image_url:
           "https://cdn01.pharmeasy.in/dam/products/248014/jointace-c2-strip-of-10-tablets-2-1664871598.jpg?dim=700x0&dpr=1&q=100 ",
         name: "MEN'S REEBOK TRAINING  POLO T-SHIRTS TEE  ",
         price: "283.8",
-        strikedoffprice: "₹330",
+        strikedoffprice: "330",
       },
     ];
   
@@ -649,7 +653,7 @@ var mensData = [
         price.textContent ="₹"+ ele.price ;
   
         var strikedoffprice = document.createElement("p") ;
-        strikedoffprice.textContent = ele.strikedoffprice ;
+        strikedoffprice.textContent = "₹"+ele.strikedoffprice ;
         strikedoffprice.style.textDecoration = "line-through" ;
 
         var button = document.createElement("button") ;

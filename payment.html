@@ -365,8 +365,8 @@
         window.location.href = "Paymentsuccuss.html"
       }
    }
-var price=JSON.pase(localStorage.getItem("amount"));
-document.getElementById("id-submit").value+= amount;
+var price=JSON.parse(localStorage.getItem("amount")).toFixed(2) ;
+document.getElementById("id-submit").value+= price;
 
 
 </script>
